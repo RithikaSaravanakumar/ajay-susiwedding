@@ -43,14 +43,14 @@ const Gallery = ({ lang }) => {
 
   const openLightbox = (index) => {
     setActiveImgIndex(index);
-    window.history.pushState({ lightboxOpen: true }, '');
+    window.history.pushState({ lightboxOpen: true }, '', '#gallery-view');
   };
 
   const closeLightbox = () => {
     if (activeImgIndex !== null) {
       setActiveImgIndex(null);
-      if (window.history.state && window.history.state.lightboxOpen) {
-        window.history.back();
+      if (window.location.hash === '#gallery-view') {
+        window.history.replaceState(null, '', window.location.pathname + window.location.search);
       }
     }
   };

@@ -31,8 +31,8 @@ const RSVP = ({ lang }) => {
 
   const handleCloseModal = () => {
     setStatus(null);
-    if (window.history.state && window.history.state.rsvpPopup) {
-      window.history.back();
+    if (window.location.hash === '#rsvp-confirmed') {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
     }
   };
 
@@ -70,7 +70,7 @@ const RSVP = ({ lang }) => {
 
       if (response.ok) {
         setStatus('success');
-        window.history.pushState({ rsvpPopup: true }, '');
+        window.history.pushState({ rsvpPopup: true }, '', '#rsvp-confirmed');
         setFormData({ name: '', phone: '', guests: 1, event: 'both', message: '' });
       } else {
         const errorData = await response.json().catch(() => ({}));
