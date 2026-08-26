@@ -177,7 +177,7 @@ const styles = {
     border: '1.5px dashed var(--color-maroon)',
     borderRadius: '16px',
     boxShadow: 'var(--shadow-md)',
-    maxWidth: '420px',
+    maxWidth: '580px',
     margin: '0 auto'
   },
   asymmetricGrid: {

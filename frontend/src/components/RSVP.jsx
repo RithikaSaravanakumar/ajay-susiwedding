@@ -249,7 +249,9 @@ const styles = {
     borderRadius: '16px',
     padding: '3rem 2.5rem',
     boxShadow: 'var(--shadow-md)',
-    textAlign: 'left'
+    textAlign: 'left',
+    maxWidth: '580px',
+    margin: '0 auto'
   },
   form: {
     display: 'flex',

@@ -83,7 +83,7 @@ const styles = {
     boxShadow: 'var(--shadow-md)',
     position: 'relative',
     overflow: 'hidden',
-    maxWidth: '480px',
+    maxWidth: '580px',
     margin: '0 auto'
   },
   watermark: {

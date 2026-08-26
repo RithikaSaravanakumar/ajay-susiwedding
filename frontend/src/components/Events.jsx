@@ -230,7 +230,7 @@ const styles = {
   },
   unifiedEventCard: {
     width: '100%',
-    maxWidth: '380px',
+    maxWidth: '580px',
     backgroundColor: '#FCFBF5',
     border: '1.5px dashed var(--color-maroon)',
     borderRadius: '16px',

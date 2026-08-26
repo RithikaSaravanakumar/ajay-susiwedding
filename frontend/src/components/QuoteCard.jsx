@@ -23,7 +23,7 @@ const styles = {
   },
   card: {
     position: 'relative',
-    maxWidth: '750px',
+    maxWidth: '580px',
     width: '100%',
     textAlign: 'center',
     padding: '2.5rem 2rem',
