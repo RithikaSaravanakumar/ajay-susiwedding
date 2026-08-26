@@ -16,8 +16,6 @@ import { FullPageSikkuKolamFrame } from './components/Motifs';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import { siteData } from './config/data';
 
-import bgImage from './assets/background.jpg';
-
 // Continuous Full-Website Falling Flowers Canvas Component
 const FullPageFallingPetals = () => {
   const canvasRef = useRef(null);
@@ -141,21 +139,6 @@ function App() {
   return (
     <FullPageSikkuKolamFrame>
       <div className="app-container" style={{ position: 'relative' }}>
-        {/* Full-Website Traditional Wedding Background Layer */}
-        <div
-          style={{
-            position: 'fixed',
-            inset: 0,
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center top',
-            backgroundRepeat: 'no-repeat',
-            opacity: 0.35,
-            pointerEvents: 'none',
-            zIndex: 0
-          }}
-        />
-
         {/* Continuous Full-Website Falling Flowers Canvas */}
         <FullPageFallingPetals />
 
