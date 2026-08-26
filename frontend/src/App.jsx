@@ -16,6 +16,8 @@ import { FullPageSikkuKolamFrame } from './components/Motifs';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import { siteData } from './config/data';
 
+import bgImage from './assets/background.jpg';
+
 function App() {
   const [lang, setLang] = useState(() => {
     return localStorage.getItem('weddingLang') || 'en';
@@ -33,11 +35,26 @@ function App() {
 
   return (
     <FullPageSikkuKolamFrame>
-      <div className="app-container">
+      <div className="app-container" style={{ position: 'relative' }}>
+        {/* Full-Website Traditional Wedding Background Layer */}
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center top',
+            backgroundRepeat: 'no-repeat',
+            opacity: 0.22,
+            pointerEvents: 'none',
+            zIndex: 0
+          }}
+        />
+
         {/* Sticky Header Nav with Language Switcher */}
         <Header lang={lang} setLang={setLang} />
 
-        <main>
+        <main style={{ position: 'relative', zIndex: 1 }}>
           {/* Fullscreen Hero */}
           <Hero lang={lang} />
 
@@ -76,7 +93,7 @@ function App() {
         </main>
 
         {/* Footer & Final Blessing */}
-        <Footer lang={lang} />
+        <Footer lang={lang} style={{ position: 'relative', zIndex: 1 }} />
 
         {/* Ambient Audio Player Toggle */}
         <MusicPlayer lang={lang} />
