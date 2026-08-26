@@ -52,17 +52,8 @@ export const siteData = {
         tag: "STEP 4",
         calligraphicTag: "HOSPITALITY FEAST",
         title: "Kai Ninaithal — Family Confirmation Feast",
-        quote: "“Kai Ninaithal… confirming the sacred alliance and celebrating togetherness with warm hospitality at both homes.”",
-        desc: "In accordance with Tamil tradition, families visited both the Bride's Home and Groom's Home to confirm the wedding alliance with traditional banana-leaf feasts.",
-        isSplit: true,
-        brideHome: {
-          title: "Feast at Bride's Home",
-          desc: "Welcoming relatives with fresh jasmine garlands and traditional hospitality."
-        },
-        groomHome: {
-          title: "Feast at Groom's Home",
-          desc: "Traditional banana tree decor and hearty feasts served with joy."
-        },
+        quote: "“Both families visited each other’s homes and enjoyed a delicious variety of traditional food served on a banana leaf, sharing the warmth of hospitality, happiness, and togetherness.”",
+        desc: "A warm family memory of traditional banana-leaf dining and heartfelt hospitality that brought both households together.",
         icon: "Utensils"
       },
       {
@@ -295,17 +286,8 @@ export const siteData = {
         tag: "படி 4",
         calligraphicTag: "விருந்தோம்பல்",
         title: "கைநினைத்தல் & விருந்து",
-        quote: "“கைநினைத்தல்… இரு குடும்பங்களின் சம்மதத்தை உறுதிசெய்து, விருந்தோம்பலால் உறவை இனிதே தொடங்கிய தருணம்.”",
-        desc: "மணமகள் மற்றும் மணமகன் இல்லங்களில் முறையே உறவினர்கள் கூடி, வாழை இலை விருந்து உபசரிப்புடன் பந்தத்தை உறுதிசெய்த மங்கள நிகழ்வு.",
-        isSplit: true,
-        brideHome: {
-          title: "மணமகள் இல்ல விருந்து",
-          desc: "மணமகள் இல்லத்தில் மல்லிகை பூச்சரங்களுடன் உறவினர்களை வரவேற்று அளித்த விருந்தோம்பல்."
-        },
-        groomHome: {
-          title: "மணமகன் இல்ல விருந்து",
-          desc: "மணமகன் இல்லத்தில் வாழை மரங்கள் கட்டி மனமகிழ்வுடன் பரிமாறிய இனிமையான விருந்து."
-        },
+        quote: "“இரு குடும்பத்தினரும் ஒருவரின் இல்லத்திற்கு மற்றவர் சென்று, வாழை இலையில் பரிமாறப்பட்ட பலவகையான சுவையான பாரம்பரிய உணவுகளை அன்பான உபசரிப்புடனும் மகிழ்ச்சியுடனும் ஒன்றாகச் சுவைத்து மகிழ்ந்தனர்.”",
+        desc: "பாரம்பரிய வாழை இலை உபசரிப்புடன் இரு வீட்டு உறவினர்களும் மனமகிழ்வுடன் ஒன்றிணைந்த இனிய விருந்து தருணம்.",
         icon: "Utensils"
       },
       {

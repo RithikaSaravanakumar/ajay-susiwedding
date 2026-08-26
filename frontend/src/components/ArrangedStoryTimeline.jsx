@@ -73,20 +73,10 @@ const ArrangedStoryTimeline = ({ lang }) => {
 
                     <p style={styles.itemDesc}>{item.desc}</p>
 
-                    {/* Special Kai Ninaithal Split Feast Sub-Cards */}
-                    {item.isSplit && (
-                      <div style={styles.splitFeastContainer}>
-                        <div style={styles.feastSubCard}>
-                          <BananaLeafMotif size={36} />
-                          <h4 style={styles.feastTitle}>{item.brideHome.title}</h4>
-                          <p style={styles.feastDesc}>{item.brideHome.desc}</p>
-                        </div>
-
-                        <div style={styles.feastSubCard}>
-                          <VazhaiMaramSide side="left" height={100} />
-                          <h4 style={styles.feastTitle}>{item.groomHome.title}</h4>
-                          <p style={styles.feastDesc}>{item.groomHome.desc}</p>
-                        </div>
+                    {/* Subtle Banana Leaf & Floral Accent for Feast Memory */}
+                    {item.id === 'kai_ninaithal' && (
+                      <div style={styles.feastAccentBox}>
+                        <BananaLeafMotif size={28} />
                       </div>
                     )}
                   </TerracottaKolamFrame>
@@ -205,36 +195,12 @@ const styles = {
     lineHeight: 1.6,
     opacity: 0.92
   },
-  splitFeastContainer: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
-    gap: '1rem',
-    marginTop: '1.25rem',
-    paddingTop: '1rem',
-    borderTop: '1px stroke rgba(255,255,255,0.2)'
-  },
-  feastSubCard: {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    borderRadius: '12px',
-    padding: '1rem',
-    border: '1px solid rgba(229, 202, 143, 0.4)',
+  feastAccentBox: {
     display: 'flex',
-    flexDirection: 'column',
     alignItems: 'center',
-    textAlign: 'center',
-    position: 'relative',
-    overflow: 'hidden'
-  },
-  feastTitle: {
-    fontSize: '1rem',
-    color: 'var(--color-gold-light)',
-    margin: '0.4rem 0 0.2rem'
-  },
-  feastDesc: {
-    fontSize: '0.82rem',
-    color: 'var(--color-cream)',
-    opacity: 0.88,
-    lineHeight: 1.4
+    justifyContent: 'center',
+    marginTop: '0.6rem',
+    opacity: 0.9
   },
   nodeDot: {
     position: 'absolute',
