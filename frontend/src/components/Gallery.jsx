@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { siteData } from '../config/data';
 import { GopuramDivider, BananaLeafDecoration, KolamCorner, LotusMotif } from './Motifs';
 import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
@@ -31,12 +31,28 @@ const Gallery = ({ lang }) => {
     }
   ];
 
+  useEffect(() => {
+    const handlePopState = (e) => {
+      if (activeImgIndex !== null) {
+        setActiveImgIndex(null);
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [activeImgIndex]);
+
   const openLightbox = (index) => {
     setActiveImgIndex(index);
+    window.history.pushState({ lightboxOpen: true }, '');
   };
 
   const closeLightbox = () => {
-    setActiveImgIndex(null);
+    if (activeImgIndex !== null) {
+      setActiveImgIndex(null);
+      if (window.history.state && window.history.state.lightboxOpen) {
+        window.history.back();
+      }
+    }
   };
 
   const nextImage = (e) => {
