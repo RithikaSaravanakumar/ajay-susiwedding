@@ -82,7 +82,7 @@ const Hero = ({ lang }) => {
   }, []);
 
   return (
-    <section id="home" style={styles.heroSection}>
+    <section id="home" className="hero-main-section" style={styles.heroSection}>
       {/* Floating Petals Canvas */}
       <canvas ref={canvasRef} style={styles.canvas} />
 

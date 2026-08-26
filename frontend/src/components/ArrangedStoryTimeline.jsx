@@ -24,7 +24,7 @@ const ArrangedStoryTimeline = ({ lang }) => {
   const timelineEvents = data.storyTimeline;
 
   return (
-    <section id="story" style={styles.section}>
+    <section id="story" className="story-main-section" style={styles.section}>
       <div style={styles.container} className="reveal-on-scroll">
         <div style={styles.headerBox}>
           <h2 style={styles.title}>{title}</h2>

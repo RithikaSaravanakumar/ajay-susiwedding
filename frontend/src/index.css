@@ -283,15 +283,18 @@ img, iframe, svg {
     white-space: nowrap;
   }
 
-  /* 2. Global Section Scaling & Headings */
-  section {
-    padding: 52px 14px !important;
-  }
-  h1, h2 {
-    font-size: clamp(24px, 7vw, 32px) !important;
+  /* 2. Compact Mobile Hero Section (Immediate Timeline Visibility on 1st Swipe) */
+  .hero-main-section {
+    min-height: 75vh !important;
+    max-height: 85vh !important;
+    padding: 4.2rem 1rem 1.5rem !important;
   }
 
-  /* 3. Single-Column Timeline Rules */
+  /* 3. Mobile Timeline Section & Scroll Margin */
+  .story-main-section {
+    scroll-margin-top: 70px !important;
+    padding-top: 2rem !important;
+  }
   .timeline-center-line {
     display: none !important;
   }
@@ -303,7 +306,7 @@ img, iframe, svg {
     padding: 0 !important;
   }
   .timeline-card-wrapper {
-    width: 92% !important;
+    width: calc(100% - 24px) !important;
     max-width: 94% !important;
     margin: 0 auto !important;
     text-align: left !important;
@@ -322,7 +325,15 @@ img, iframe, svg {
     height: 40px !important;
   }
 
-  /* 4. Text Readability & Paragraph Wrapping */
+  /* 4. Global Section Scaling & Headings */
+  section {
+    padding: 48px 12px !important;
+  }
+  h1, h2 {
+    font-size: clamp(24px, 7vw, 32px) !important;
+  }
+
+  /* 5. Text Readability & Paragraph Wrapping */
   p, span, div {
     word-break: normal !important;
     overflow-wrap: normal !important;
@@ -331,14 +342,14 @@ img, iframe, svg {
   .storyCard p,
   .itemDesc,
   .quoteText {
-    font-size: clamp(14px, 3.8vw, 17px) !important;
+    font-size: clamp(14px, 3.8vw, 16px) !important;
     line-height: 1.6 !important;
   }
   .itemTitle {
-    font-size: clamp(20px, 5.5vw, 25px) !important;
+    font-size: clamp(20px, 5.5vw, 24px) !important;
   }
 
-  /* 5. Event Location Cards & Map Embeds */
+  /* 6. Event Location Cards & Map Embeds */
   div[style*="unifiedEventCard"] {
     padding: 1.75rem 0.85rem 1.5rem !important;
     border-radius: 18px !important;
@@ -359,23 +370,23 @@ img, iframe, svg {
     height: 46px !important;
   }
 
-  /* 6. Hero Mobile Scale & Scene Artwork Position */
+  /* 7. Hero Scene Artwork Scale & Position */
   div[style*="bottomLeftScene"] {
-    transform: scale(0.5);
+    transform: scale(0.48);
     transform-origin: bottom left;
     left: 0 !important;
     bottom: 0 !important;
-    opacity: 0.55 !important;
+    opacity: 0.5 !important;
   }
   div[style*="bottomRightScene"] {
-    transform: scale(0.5);
+    transform: scale(0.48);
     transform-origin: bottom right;
     right: 0 !important;
     bottom: 0 !important;
-    opacity: 0.55 !important;
+    opacity: 0.5 !important;
   }
 
-  /* 7. Floating Music Player Button */
+  /* 8. Floating Music Player Button */
   .music-player-toggle {
     bottom: calc(14px + env(safe-area-inset-bottom)) !important;
     right: 14px !important;
