@@ -77,6 +77,12 @@ body.lang-en h4 {
   padding-right: 14px;
 }
 
+/* Remove dots in starting hero section alone */
+.hero-main-section {
+  background-image: none !important;
+  background-color: #FAF5EC !important;
+}
+
 /* Make all main sections transparent so maroon kolams, dots, and lines are clearly visible throughout */
 section {
   background-color: transparent !important;
@@ -354,6 +360,7 @@ div[style*="feastSubCard"] {
     min-height: 65vh !important;
     max-height: 80vh !important;
     padding: 2rem 0.85rem 1.5rem !important;
+    background-image: none !important;
   }
 
   /* 3. Mobile Section Padding & Vertical Gaps */
@@ -503,14 +510,14 @@ div[style*="feastSubCard"] {
     transform-origin: bottom left;
     left: 0 !important;
     bottom: 0 !important;
-    opacity: 0.45 !important;
+    opacity: 0.3 !important;
   }
   div[style*="bottomRightScene"] {
     transform: scale(0.42);
     transform-origin: bottom right;
     right: 0 !important;
     bottom: 0 !important;
-    opacity: 0.45 !important;
+    opacity: 0.3 !important;
   }
 
   /* 12. Floating Music Control */

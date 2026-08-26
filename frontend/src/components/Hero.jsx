@@ -161,8 +161,7 @@ const styles = {
     justifyContent: 'center',
     position: 'relative',
     backgroundColor: '#FAF5EC',
-    backgroundImage: 'radial-gradient(#E5CA8F 0.6px, transparent 0.6px)',
-    backgroundSize: '32px 32px',
+    backgroundImage: 'none',
     padding: '7.5rem 1.5rem 5rem',
     overflow: 'hidden',
     textAlign: 'center'
