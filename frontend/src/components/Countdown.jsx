@@ -54,9 +54,9 @@ const Countdown = ({ lang }) => {
           <GopuramDivider />
         </div>
 
-        <div style={styles.grid}>
+        <div style={styles.grid} className="countdown-grid-container">
           {timeBlocks.map((block, idx) => (
-            <div key={idx} style={styles.card} className="reveal-scale delay-1">
+            <div key={idx} style={styles.card} className="countdown-timer-box reveal-scale delay-1">
               <div style={styles.valueBox}>
                 <span style={styles.value}>
                   {String(block.value).padStart(2, '0')}

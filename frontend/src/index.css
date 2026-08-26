@@ -270,6 +270,26 @@ img, iframe, svg {
   scrollbar-width: none;
 }
 
+/* Single Horizontal Line Countdown Grid */
+.countdown-grid-container {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+  width: 100% !important;
+  max-width: 480px !important;
+  margin: 0 auto !important;
+}
+
+.countdown-timer-box {
+  flex: 1 1 0px !important;
+  min-width: 0 !important;
+  padding: 0.4rem 0.2rem !important;
+  border-radius: 8px !important;
+}
+
 /* Ultra-Nano Mobile Scale Rules (max-width: 767px) */
 @media (max-width: 767px) {
   /* 1. Nano Mobile Header Nav */
@@ -318,7 +338,7 @@ img, iframe, svg {
     font-size: clamp(13px, 3.5vw, 15px) !important;
   }
 
-  /* 4. Compact Micro Cards Sizing (Width ~ 82%, Max-Width ~ 290px) */
+  /* 4. Compact Micro Cards Sizing (Width ~ 84%, Max-Width ~ 290px) */
   .story-main-section {
     scroll-margin-top: 40px !important;
     padding-top: 0.4rem !important;
@@ -408,7 +428,15 @@ img, iframe, svg {
     border-radius: 8px !important;
   }
 
-  /* 8. Nano Buttons Scaling */
+  /* 8. Single Line Horizontal Countdown Box Mobile Scaling */
+  .countdown-timer-box span[style*="value"] {
+    font-size: 1.25rem !important;
+  }
+  .countdown-timer-box span[style*="label"] {
+    font-size: 0.65rem !important;
+  }
+
+  /* 9. Nano Buttons Scaling */
   .btn-gold,
   .btn-maroon,
   .btn-outline-gold {
@@ -417,7 +445,7 @@ img, iframe, svg {
     height: 26px !important;
   }
 
-  /* 9. Hero Scene Artwork Scale & Position */
+  /* 10. Hero Scene Artwork Scale & Position */
   div[style*="bottomLeftScene"] {
     transform: scale(0.18);
     transform-origin: bottom left;
@@ -433,7 +461,7 @@ img, iframe, svg {
     opacity: 0.2 !important;
   }
 
-  /* 10. Floating Music Player Button */
+  /* 11. Floating Music Player Button */
   .music-player-toggle {
     bottom: calc(6px + env(safe-area-inset-bottom)) !important;
     right: 6px !important;
