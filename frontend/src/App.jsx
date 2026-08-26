@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Invitation from './components/Invitation';
 import ArrangedStoryTimeline from './components/ArrangedStoryTimeline';
-import KalyanaKathaigal from './components/KalyanaKathaigal';
 import QuoteCard from './components/QuoteCard';
 import Events from './components/Events';
 import Countdown from './components/Countdown';
@@ -160,9 +159,6 @@ function App() {
 
           {/* Quote Card 2 */}
           {quotes[1] && <QuoteCard text={quotes[1]} lang={lang} />}
-
-          {/* Kalyana Kathaigal Memory Story Cards */}
-          <KalyanaKathaigal lang={lang} />
 
           {/* Couple Story */}
           <Couple lang={lang} />
