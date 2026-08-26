@@ -36,14 +36,14 @@
   padding: 0;
 }
 
+/* Clean Base Background (No Dots on html/body) */
 html, body {
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden !important;
   scroll-behavior: smooth;
   background-color: #FAF5EC !important;
-  background-image: radial-gradient(#6B1E2D 1.2px, transparent 1.2px) !important;
-  background-size: 24px 24px !important;
+  background-image: none !important;
   color: var(--color-brown-dark);
   font-family: var(--font-en-body);
   -webkit-font-smoothing: antialiased;
@@ -87,15 +87,35 @@ section,
 #gallery,
 #rsvp {
   scroll-margin-top: 85px !important;
-  background-color: transparent !important;
+}
+
+/* Subtle Decorative Background Dots ONLY in Card-based Sections */
+#story,
+#invitation,
+#couple,
+#events,
+#gallery,
+#rsvp,
+.story-main-section,
+.countdown-section {
+  background-image: radial-gradient(rgba(107, 30, 45, 0.22) 1.2px, transparent 1.2px) !important;
+  background-size: 24px 24px !important;
+}
+
+/* Clean Non-Card Sections (Hero, Quotes, Header, Footer) Have Completely Clean Background */
+#home,
+.hero-main-section,
+.quote-card-section,
+header.main-header,
+footer {
+  background-image: none !important;
+  background-color: #FAF5EC !important;
 }
 
 /* Hero Section Top Clearance so Fixed Navbar Never Covers Lamp or A♥S Logo */
 .hero-main-section {
   margin-top: 64px !important;
   padding-top: 3.5rem !important;
-  background-image: none !important;
-  background-color: #FAF5EC !important;
 }
 
 div[style*="topIconBox"] {
@@ -373,7 +393,6 @@ div[style*="feastSubCard"] {
     margin-top: 48px !important;
     min-height: 40vh !important;
     padding: 2.2rem 0.5rem 0.8rem !important;
-    background-image: none !important;
   }
   div[style*="topIconBox"] {
     margin-top: 2rem !important;
