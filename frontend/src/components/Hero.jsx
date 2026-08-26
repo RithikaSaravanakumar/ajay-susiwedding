@@ -31,17 +31,17 @@ const Hero = ({ lang }) => {
     };
     window.addEventListener('resize', handleResize);
 
-    // Floating Jasmine Petals & Golden Particles
-    const particles = Array.from({ length: 36 }).map(() => ({
+    // Flowing Jasmine, Marigold, & Lotus Petals Array
+    const particles = Array.from({ length: 42 }).map(() => ({
       x: Math.random() * width,
       y: Math.random() * height,
-      size: Math.random() * 5 + 3,
-      speedY: Math.random() * 0.8 + 0.3,
-      speedX: Math.random() * 0.4 - 0.2,
+      size: Math.random() * 6 + 4,
+      speedY: Math.random() * 0.9 + 0.4,
+      speedX: Math.random() * 0.6 - 0.3,
       rotation: Math.random() * 360,
       rotationSpeed: Math.random() * 1.5 - 0.75,
-      opacity: Math.random() * 0.6 + 0.2,
-      color: Math.random() > 0.4 ? '#E5CA8F' : '#F8F1E3'
+      opacity: Math.random() * 0.7 + 0.3,
+      type: Math.random() > 0.5 ? 'jasmine' : Math.random() > 0.5 ? 'marigold' : 'lotus'
     }));
 
     const render = () => {
@@ -61,11 +61,31 @@ const Hero = ({ lang }) => {
         ctx.translate(p.x, p.y);
         ctx.rotate((p.rotation * Math.PI) / 180);
         ctx.globalAlpha = p.opacity;
-        ctx.fillStyle = p.color;
 
-        ctx.beginPath();
-        ctx.ellipse(0, 0, p.size, p.size * 1.8, 0, 0, 2 * Math.PI);
-        ctx.fill();
+        if (p.type === 'jasmine') {
+          // White Jasmine Flower (மல்லிகைப்பூ)
+          ctx.fillStyle = '#FFFFFF';
+          ctx.beginPath();
+          ctx.ellipse(0, 0, p.size, p.size * 1.6, 0, 0, 2 * Math.PI);
+          ctx.fill();
+
+          ctx.fillStyle = '#F59E0B';
+          ctx.beginPath();
+          ctx.arc(0, 0, p.size * 0.3, 0, 2 * Math.PI);
+          ctx.fill();
+        } else if (p.type === 'marigold') {
+          // Golden-Yellow Marigold Petal (சாமந்திப்பூ)
+          ctx.fillStyle = '#FBBF24';
+          ctx.beginPath();
+          ctx.ellipse(0, 0, p.size * 1.2, p.size * 0.8, 0, 0, 2 * Math.PI);
+          ctx.fill();
+        } else {
+          // Pink Lotus Petal (தாமரை இதழ்)
+          ctx.fillStyle = '#F48FB1';
+          ctx.beginPath();
+          ctx.ellipse(0, 0, p.size * 0.9, p.size * 1.8, 0, 0, 2 * Math.PI);
+          ctx.fill();
+        }
 
         ctx.restore();
       });
