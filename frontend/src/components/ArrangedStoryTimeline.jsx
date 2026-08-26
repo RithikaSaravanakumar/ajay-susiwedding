@@ -55,7 +55,7 @@ const ArrangedStoryTimeline = ({ lang }) => {
                     ...styles.cardWrapper,
                     textAlign: isEven ? 'right' : 'left'
                   }}
-                  className={`reveal-scale delay-${(index % 4) + 1}`}
+                  className={`timeline-card-wrapper reveal-scale delay-${(index % 4) + 1}`}
                 >
                   {/* Terracotta Kolam Frame for milestone cards */}
                   <TerracottaKolamFrame style={styles.storyCard}>
@@ -99,7 +99,7 @@ const ArrangedStoryTimeline = ({ lang }) => {
                 </div>
 
                 {/* Empty Balancing Spacer for Desktop Grid */}
-                <div style={styles.emptySpacer} />
+                <div style={styles.emptySpacer} className="timeline-empty-spacer" />
               </div>
             );
           })}
