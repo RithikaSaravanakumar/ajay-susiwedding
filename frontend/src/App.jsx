@@ -169,9 +169,6 @@ function App() {
           {/* Wedding Events (Muhurtham & Reception Integrated with Locations & Maps) */}
           <Events lang={lang} />
 
-          {/* Live Countdown Timer */}
-          <Countdown lang={lang} />
-
           {/* Photo Gallery & Lightbox */}
           <Gallery lang={lang} />
 
