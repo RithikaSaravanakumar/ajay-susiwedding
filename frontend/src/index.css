@@ -110,8 +110,8 @@ img, iframe, svg {
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
-  margin: 1.5rem auto 2.5rem;
-  max-width: 320px;
+  margin: 1rem auto 1.5rem;
+  max-width: 280px;
 }
 
 .ornament-line {
@@ -130,8 +130,8 @@ img, iframe, svg {
 /* Scroll Reveal Animations */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
@@ -142,8 +142,8 @@ img, iframe, svg {
 
 .reveal-scale {
   opacity: 0;
-  transform: scale(0.92);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(0.94);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-scale.is-revealed {
@@ -162,14 +162,14 @@ img, iframe, svg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 100%);
   color: var(--color-maroon-dark);
-  padding: 0.85rem 1.8rem;
+  padding: 0.7rem 1.4rem;
   border: 1px solid var(--color-gold-dark);
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   letter-spacing: 0.5px;
   cursor: pointer;
   box-shadow: var(--shadow-sm);
@@ -178,7 +178,7 @@ img, iframe, svg {
 }
 
 .btn-gold:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-gold);
   background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
   color: #FFF;
@@ -188,14 +188,14 @@ img, iframe, svg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   background: linear-gradient(135deg, var(--color-maroon) 0%, var(--color-maroon-dark) 100%);
   color: var(--color-cream);
-  padding: 0.9rem 2rem;
+  padding: 0.75rem 1.5rem;
   border: 1px solid var(--color-gold);
   border-radius: 50px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.92rem;
   cursor: pointer;
   box-shadow: var(--shadow-md);
   transition: var(--transition-smooth);
@@ -203,7 +203,7 @@ img, iframe, svg {
 }
 
 .btn-maroon:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
   background: linear-gradient(135deg, var(--color-maroon-light) 0%, var(--color-maroon) 100%);
   border-color: var(--color-gold-light);
@@ -213,14 +213,14 @@ img, iframe, svg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   background: transparent;
   color: var(--color-maroon);
-  padding: 0.75rem 1.6rem;
+  padding: 0.6rem 1.2rem;
   border: 1.5px solid var(--color-gold);
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   cursor: pointer;
   transition: var(--transition-smooth);
   text-decoration: none;
@@ -268,12 +268,12 @@ img, iframe, svg {
   scrollbar-width: none;
 }
 
-/* Mobile-Only Precise Responsive Rules (max-width: 767px) */
+/* Ultra-Compact Mobile Scale Rules (max-width: 767px) */
 @media (max-width: 767px) {
-  /* 1. Mobile Header & Navigation */
+  /* 1. Compact Header Nav */
   header.main-header {
-    height: 64px !important;
-    padding: 0.4rem 1rem !important;
+    height: 56px !important;
+    padding: 0.3rem 0.85rem !important;
   }
   .desktop-nav-ul {
     display: none !important;
@@ -284,21 +284,39 @@ img, iframe, svg {
     justify-content: center;
   }
   .brand-title-text {
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
     white-space: nowrap;
   }
 
-  /* 2. Compact Mobile Hero Section (Immediate Timeline Visibility on 1st Swipe) */
+  /* 2. Ultra-Compact Mobile Hero (Fits in 55vh–62vh) */
   .hero-main-section {
-    min-height: 75vh !important;
-    max-height: 85vh !important;
-    padding: 4.2rem 1rem 1.5rem !important;
+    min-height: 55vh !important;
+    max-height: 65vh !important;
+    padding: 3.5rem 0.75rem 1.2rem !important;
+  }
+  .hero-main-section h1 {
+    font-size: clamp(2rem, 6vw, 2.6rem) !important;
+    margin: 0.1rem 0 !important;
+  }
+  .hero-main-section p {
+    font-size: 0.9rem !important;
   }
 
-  /* 3. Mobile Timeline Section & Scroll Margin */
+  /* 3. Compact Mobile Section Padding & Vertical Gaps */
+  section {
+    padding: 26px 10px !important;
+  }
+  div[style*="headerBox"] {
+    margin-bottom: 1.5rem !important;
+  }
+  h1, h2 {
+    font-size: clamp(20px, 6vw, 26px) !important;
+  }
+
+  /* 4. Compact Timeline Mobile Layout */
   .story-main-section {
-    scroll-margin-top: 70px !important;
-    padding-top: 2rem !important;
+    scroll-margin-top: 60px !important;
+    padding-top: 1.2rem !important;
   }
   .timeline-center-line {
     display: none !important;
@@ -306,13 +324,13 @@ img, iframe, svg {
   .timeline-item-container {
     flex-direction: column !important;
     align-items: center !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1.25rem !important;
     width: 100% !important;
     padding: 0 !important;
   }
   .timeline-card-wrapper {
-    width: calc(100% - 24px) !important;
-    max-width: 94% !important;
+    width: calc(100% - 16px) !important;
+    max-width: 96% !important;
     margin: 0 auto !important;
     text-align: left !important;
     float: none !important;
@@ -325,17 +343,13 @@ img, iframe, svg {
     left: 0 !important;
     top: 0 !important;
     transform: none !important;
-    margin: 0 auto 0.6rem !important;
-    width: 40px !important;
-    height: 40px !important;
+    margin: 0 auto 0.4rem !important;
+    width: 34px !important;
+    height: 34px !important;
   }
-
-  /* 4. Global Section Scaling & Headings */
-  section {
-    padding: 48px 12px !important;
-  }
-  h1, h2 {
-    font-size: clamp(24px, 7vw, 32px) !important;
+  .storyCard {
+    padding: 1.25rem 0.85rem !important;
+    border-radius: 14px !important;
   }
 
   /* 5. Text Readability & Paragraph Wrapping */
@@ -347,56 +361,59 @@ img, iframe, svg {
   .storyCard p,
   .itemDesc,
   .quoteText {
-    font-size: clamp(14px, 3.8vw, 16px) !important;
-    line-height: 1.6 !important;
+    font-size: clamp(13px, 3.5vw, 15px) !important;
+    line-height: 1.5 !important;
   }
   .itemTitle {
-    font-size: clamp(20px, 5.5vw, 24px) !important;
+    font-size: clamp(17px, 4.8vw, 21px) !important;
   }
 
   /* 6. Event Location Cards & Map Embeds */
+  div[style*="eventsWrapper"] {
+    gap: 1.75rem !important;
+  }
   div[style*="unifiedEventCard"] {
-    padding: 1.75rem 0.85rem 1.5rem !important;
-    border-radius: 18px !important;
-    width: 96% !important;
+    padding: 1.25rem 0.75rem 1.1rem !important;
+    border-radius: 16px !important;
+    width: 98% !important;
     margin: 0 auto !important;
   }
   div[style*="venueLocationSection"] {
-    padding: 1.25rem 0.75rem !important;
+    padding: 0.85rem 0.6rem !important;
     width: 100% !important;
   }
   div[style*="mapContainer"] {
-    height: 190px !important;
-    aspect-ratio: 16 / 9;
+    height: 150px !important;
   }
   a[style*="directionsBtn"] {
     max-width: 100% !important;
     width: 100% !important;
-    height: 46px !important;
+    height: 42px !important;
+    font-size: 0.88rem !important;
   }
 
   /* 7. Hero Scene Artwork Scale & Position */
   div[style*="bottomLeftScene"] {
-    transform: scale(0.48);
+    transform: scale(0.4);
     transform-origin: bottom left;
     left: 0 !important;
     bottom: 0 !important;
-    opacity: 0.5 !important;
+    opacity: 0.45 !important;
   }
   div[style*="bottomRightScene"] {
-    transform: scale(0.48);
+    transform: scale(0.4);
     transform-origin: bottom right;
     right: 0 !important;
     bottom: 0 !important;
-    opacity: 0.5 !important;
+    opacity: 0.45 !important;
   }
 
   /* 8. Floating Music Player Button */
   .music-player-toggle {
-    bottom: calc(14px + env(safe-area-inset-bottom)) !important;
-    right: 14px !important;
-    width: 44px !important;
-    height: 44px !important;
+    bottom: calc(12px + env(safe-area-inset-bottom)) !important;
+    right: 12px !important;
+    width: 40px !important;
+    height: 40px !important;
   }
 }
 
