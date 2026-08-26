@@ -1,63 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Mukta+Malar:wght@300;400;500;600;700&family=Noto+Serif+Tamil:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
-
+/* Modern Luxury Tamil Wedding Design System */
 :root {
-  --color-cream: #F8F1E3;
+  --color-ivory: #F8F1E3;
+  --color-cream: #FCF8F2;
+  --color-bg: #FAF5EC;
+  --color-white: #FFFFFF;
+  --color-brown-dark: #2F211B;
+  --color-brown: #4A3528;
   --color-maroon: #6B1E2D;
   --color-maroon-dark: #4A121E;
-  --color-maroon-light: #8C2C3E;
+  --color-maroon-light: #9B2C2C;
   --color-terracotta: #7A2535;
-  --color-terracotta-dark: #581924;
-  --color-terracotta-light: #9B3245;
   --color-green: #2E7D32;
   --color-green-dark: #1B5E20;
-  --color-green-light: #81C784;
   --color-gold: #C6A15B;
   --color-gold-light: #E5CA8F;
   --color-gold-dark: #9A7835;
-  --color-beige: #E8D8C3;
-  --color-brown: #2F211B;
-  --color-rose: #B98282;
-  --color-white: #FFFFFF;
-  --color-bg: #F8F1E3;
-  --color-card-bg: #FCF8F2;
 
-  --font-en-display: 'Cormorant Garamond', 'Playfair Display', serif;
-  --font-en-body: 'Inter', sans-serif;
-  --font-ta-display: 'Noto Serif Tamil', 'Mukta Malar', serif;
-  --font-ta-body: 'Mukta Malar', sans-serif;
+  --font-ta-display: 'Mukta Malar', 'Catamaran', 'Anek Tamil', serif;
+  --font-ta-body: 'Catamaran', 'Anek Tamil', sans-serif;
+  --font-en-display: 'Cinzel', 'Playfair Display', serif;
+  --font-en-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
 
-  --shadow-sm: 0 4px 15px rgba(107, 30, 45, 0.05);
-  --shadow-md: 0 10px 30px rgba(107, 30, 45, 0.08);
-  --shadow-lg: 0 18px 45px rgba(107, 30, 45, 0.12);
-  --shadow-gold: 0 8px 25px rgba(198, 161, 91, 0.25);
-  --shadow-terracotta: 0 12px 35px rgba(122, 37, 53, 0.25);
+  --shadow-sm: 0 4px 12px rgba(107, 30, 45, 0.05);
+  --shadow-md: 0 8px 24px rgba(107, 30, 45, 0.08);
+  --shadow-lg: 0 16px 40px rgba(107, 30, 45, 0.12);
+  --shadow-gold: 0 8px 25px rgba(198, 161, 91, 0.3);
 
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-fast: all 0.2s ease-out;
 }
 
+/* Global Reset & Viewport Rules */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html {
+html, body {
+  width: 100%;
+  overflow-x: hidden !important;
   scroll-behavior: smooth;
-  font-size: 16px;
-}
-
-body {
-  background-color: var(--color-bg);
-  color: var(--color-brown);
+  background-color: var(--color-terracotta);
+  color: var(--color-brown-dark);
   font-family: var(--font-en-body);
-  line-height: 1.7;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Tamil Typography Overrides */
 body.lang-ta {
   font-family: var(--font-ta-body);
 }
@@ -65,27 +53,31 @@ body.lang-ta {
 body.lang-ta h1,
 body.lang-ta h2,
 body.lang-ta h3,
-body.lang-ta h4,
-body.lang-ta .serif-text {
+body.lang-ta h4 {
   font-family: var(--font-ta-display);
-  letter-spacing: 0;
 }
 
-h1, h2, h3, h4, .serif-text {
+body.lang-en h1,
+body.lang-en h2,
+body.lang-en h3,
+body.lang-en h4 {
   font-family: var(--font-en-display);
-  font-weight: 600;
-  color: var(--color-maroon);
 }
 
-/* Terracotta Tamil Panel Styling */
-.terracotta-card {
-  background-color: var(--color-terracotta);
-  color: var(--color-cream);
-  border: 2px solid var(--color-gold);
-  border-radius: 18px;
-  box-shadow: var(--shadow-terracotta);
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden !important;
   position: relative;
-  overflow: hidden;
+}
+
+/* Terracotta Card Styling */
+.terracotta-card {
+  background-color: var(--color-terracotta) !important;
+  background-image: radial-gradient(#9B3245 1px, transparent 1px) !important;
+  background-size: 24px 24px !important;
+  color: var(--color-ivory) !important;
+  border: 2px solid var(--color-gold) !important;
 }
 
 .terracotta-card h3,
@@ -245,34 +237,6 @@ h1, h2, h3, h4, .serif-text {
   animation: flameGlow 2s infinite ease-in-out;
 }
 
-@keyframes floatPetal {
-  0% {
-    transform: translateY(-10vh) rotate(0deg) translateX(0px);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.7;
-  }
-  90% {
-    opacity: 0.7;
-  }
-  100% {
-    transform: translateY(105vh) rotate(360deg) translateX(50px);
-    opacity: 0;
-  }
-}
-
-@keyframes pulseSoft {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.08);
-    opacity: 1;
-  }
-}
-
 @keyframes spinSlow {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -288,6 +252,73 @@ h1, h2, h3, h4, .serif-text {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Mobile-First Responsive Rules (360px - 768px) */
+@media (max-width: 768px) {
+  /* Header Nav */
+  ul[style*="desktopUl"] {
+    display: none !important;
+  }
+  button[style*="mobileMenuBtn"] {
+    display: block !important;
+  }
+
+  /* Section Padding */
+  section {
+    padding: 3.5rem 1rem !important;
+  }
+
+  /* Bottom Scene Artwork Scale on Mobile */
+  div[style*="bottomLeftScene"] {
+    transform: scale(0.65);
+    transform-origin: bottom left;
+    left: 2px !important;
+    bottom: 2px !important;
+  }
+  div[style*="bottomRightScene"] {
+    transform: scale(0.65);
+    transform-origin: bottom right;
+    right: 2px !important;
+    bottom: 2px !important;
+  }
+
+  /* Timeline Single Column Mobile Rules */
+  .timeline-center-line {
+    left: 24px !important;
+  }
+  .timeline-item-container {
+    width: 100% !important;
+    padding-left: 55px !important;
+    padding-right: 10px !important;
+    left: 0 !important;
+    text-align: left !important;
+  }
+  .timeline-node-dot {
+    left: 14px !important;
+    transform: none !important;
+  }
+
+  /* Event Location Cards Mobile Stacking */
+  div[style*="unifiedEventCard"] {
+    padding: 2.2rem 1rem 1.8rem !important;
+    border-radius: 18px !important;
+  }
+  div[style*="venueLocationSection"] {
+    padding: 1.4rem 1rem !important;
+  }
+  a[style*="directionsBtn"] {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Floating Music Toggle Mobile Safety */
+  .music-player-toggle {
+    bottom: calc(20px + env(safe-area-inset-bottom)) !important;
+    right: 16px !important;
+    width: 48px !important;
+    height: 48px !important;
+  }
 }
 
 /* Reduced Motion Compliance */
