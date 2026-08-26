@@ -181,7 +181,7 @@ img, iframe, svg {
   hyphens: none !important;
 }
 
-/* Enforce Maroon Dotted/Dashed Line Border on Every Card Container */
+/* Enforce Maroon Dotted/Dashed Line Border on Content Card Containers (Excluding Success Modal) */
 .storyCard,
 div[style*="unifiedEventCard"],
 div[style*="invitationCard"],
@@ -190,6 +190,24 @@ div[style*="feastSubCard"] {
   border: 1.5px dashed var(--color-maroon) !important;
   box-shadow: 0 6px 18px rgba(107, 30, 45, 0.08) !important;
   overflow: hidden !important;
+}
+
+/* Explicit Clean Styling for RSVP Success Popup Modal (No Maroon Borders) */
+.rsvp-success-card,
+div[style*="successCard"] {
+  border: 2px solid var(--color-gold) !important;
+  background-color: #FCF8F2 !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6) !important;
+  z-index: 1000000 !important;
+}
+
+div[style*="successModal"] {
+  z-index: 999999 !important;
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(25, 15, 18, 0.88) !important;
 }
 
 /* Compact Countdown Main Card with Rounded Corners & Maroon Dotted Border */

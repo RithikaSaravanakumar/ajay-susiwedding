@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { siteData } from '../config/data';
 import Monogram from './Monogram';
 import { GopuramDivider } from './Motifs';
@@ -17,6 +18,23 @@ const RSVP = ({ lang }) => {
 
   const [status, setStatus] = useState(null); // 'submitting', 'success', 'error'
   const [errorDetails, setErrorDetails] = useState('');
+
+  useEffect(() => {
+    const handlePopState = () => {
+      if (status === 'success') {
+        setStatus(null);
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [status]);
+
+  const handleCloseModal = () => {
+    setStatus(null);
+    if (window.history.state && window.history.state.rsvpPopup) {
+      window.history.back();
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -52,6 +70,7 @@ const RSVP = ({ lang }) => {
 
       if (response.ok) {
         setStatus('success');
+        window.history.pushState({ rsvpPopup: true }, '');
         setFormData({ name: '', phone: '', guests: 1, event: 'both', message: '' });
       } else {
         const errorData = await response.json().catch(() => ({}));
@@ -193,10 +212,10 @@ const RSVP = ({ lang }) => {
         </div>
       </div>
 
-      {/* Success Modal */}
-      {status === 'success' && (
-        <div style={styles.successModal}>
-          <div style={styles.successCard}>
+      {/* Success Modal mounted via Portal directly to body */}
+      {status === 'success' && createPortal(
+        <div style={styles.successModal} onClick={handleCloseModal}>
+          <div style={styles.successCard} className="rsvp-success-card" onClick={(e) => e.stopPropagation()}>
             <Monogram size="lg" />
             <div style={styles.sparkleIconBox}>
               <Sparkles size={36} color="var(--color-gold)" />
@@ -205,7 +224,7 @@ const RSVP = ({ lang }) => {
             <p style={styles.successText}>{content.successMsg}</p>
 
             <button
-              onClick={() => setStatus(null)}
+              onClick={handleCloseModal}
               className="btn-gold"
               style={styles.doneBtn}
             >
@@ -213,7 +232,8 @@ const RSVP = ({ lang }) => {
               <span>{content.closeBtn}</span>
             </button>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );
@@ -328,8 +348,10 @@ const styles = {
   successModal: {
     position: 'fixed',
     inset: 0,
-    backgroundColor: 'rgba(25, 15, 18, 0.85)',
-    zIndex: 99999,
+    width: '100vw',
+    height: '100vh',
+    backgroundColor: 'rgba(25, 15, 18, 0.88)',
+    zIndex: 999999,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -338,36 +360,38 @@ const styles = {
     animation: 'fadeIn 0.3s ease'
   },
   successCard: {
-    backgroundColor: 'var(--color-cream)',
+    backgroundColor: '#FCF8F2',
     border: '2px solid var(--color-gold)',
     borderRadius: '20px',
-    padding: '3rem 2.5rem',
-    maxWidth: '480px',
+    padding: '2.5rem 2rem',
+    maxWidth: '440px',
     width: '100%',
     textAlign: 'center',
-    boxShadow: '0 25px 60px rgba(0,0,0,0.4)',
+    boxShadow: '0 25px 60px rgba(0,0,0,0.6)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '1.25rem'
+    gap: '1rem',
+    position: 'relative',
+    zIndex: 1000000
   },
   sparkleIconBox: {
-    marginTop: '0.5rem'
+    marginTop: '0.3rem'
   },
   successTitle: {
-    fontSize: '1.85rem',
+    fontSize: 'clamp(1.5rem, 3.5vw, 1.85rem)',
     color: 'var(--color-maroon)',
     margin: 0
   },
   successText: {
-    fontSize: '1.1rem',
+    fontSize: 'clamp(0.95rem, 2.2vw, 1.1rem)',
     color: 'var(--color-brown)',
     lineHeight: 1.6
   },
   doneBtn: {
     width: '100%',
     marginTop: '0.5rem',
-    padding: '0.9rem'
+    padding: '0.85rem'
   }
 };
 
