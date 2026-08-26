@@ -40,9 +40,10 @@ const Header = ({ lang, setLang }) => {
 
   return (
     <header
+      className="main-header"
       style={{
         ...styles.header,
-        backgroundColor: isScrolled ? 'rgba(248, 241, 227, 0.95)' : 'rgba(248, 241, 227, 0.8)',
+        backgroundColor: isScrolled ? 'rgba(248, 241, 227, 0.95)' : 'rgba(248, 241, 227, 0.85)',
         borderBottom: isScrolled ? '1px solid var(--color-gold)' : '1px solid transparent',
         boxShadow: isScrolled ? '0 4px 20px rgba(107, 30, 45, 0.08)' : 'none'
       }}
@@ -51,11 +52,11 @@ const Header = ({ lang, setLang }) => {
         {/* Monogram Brand */}
         <a href="#home" style={styles.brand}>
           <Monogram size="sm" />
-          <span style={styles.brandTitle}>Ajay & Susindra</span>
+          <span style={styles.brandTitle} className="brand-title-text">Ajay & Susindra</span>
         </a>
 
         {/* Desktop Navigation Links */}
-        <ul style={styles.desktopUl}>
+        <ul style={styles.desktopUl} className="desktop-nav-ul">
           {navItems.map((item) => (
             <li key={item.id}>
               <a
@@ -101,6 +102,7 @@ const Header = ({ lang, setLang }) => {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             style={styles.mobileMenuBtn}
+            className="mobile-menu-btn"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X size={26} color="var(--color-maroon)" /> : <Menu size={26} color="var(--color-maroon)" />}
@@ -110,7 +112,7 @@ const Header = ({ lang, setLang }) => {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div style={styles.mobileDrawer}>
+        <div style={styles.mobileDrawer} className="mobile-drawer-box">
           <ul style={styles.mobileUl}>
             {navItems.map((item) => (
               <li key={item.id}>
@@ -142,7 +144,7 @@ const styles = {
     zIndex: 1000,
     backdropFilter: 'blur(12px)',
     transition: 'all 0.3s ease-out',
-    padding: '0.75rem 1.5rem'
+    padding: '0.6rem 1.25rem'
   },
   nav: {
     display: 'flex',
@@ -154,12 +156,12 @@ const styles = {
   brand: {
     display: 'flex',
     alignItems: 'center',
-    gap: '0.75rem',
+    gap: '0.6rem',
     textDecoration: 'none'
   },
   brandTitle: {
     fontFamily: 'var(--font-en-display)',
-    fontSize: '1.25rem',
+    fontSize: '1.15rem',
     fontWeight: '700',
     color: 'var(--color-maroon)',
     letterSpacing: '0.5px'
@@ -190,21 +192,21 @@ const styles = {
   rightGroup: {
     display: 'flex',
     alignItems: 'center',
-    gap: '1rem'
+    gap: '0.75rem'
   },
   langToggleBox: {
     display: 'flex',
     alignItems: 'center',
     backgroundColor: 'var(--color-beige)',
     borderRadius: '30px',
-    padding: '3px',
+    padding: '2px',
     border: '1px solid var(--color-gold-light)'
   },
   langPill: {
     border: 'none',
-    padding: '0.35rem 0.85rem',
+    padding: '0.3rem 0.7rem',
     borderRadius: '20px',
-    fontSize: '0.85rem',
+    fontSize: '0.8rem',
     fontWeight: '600',
     cursor: 'pointer',
     transition: 'all 0.3s ease'
@@ -219,19 +221,19 @@ const styles = {
   mobileDrawer: {
     backgroundColor: 'var(--color-cream)',
     borderTop: '1px solid var(--color-gold-light)',
-    padding: '1.5rem',
+    padding: '1.25rem',
     boxShadow: '0 10px 25px rgba(0,0,0,0.1)'
   },
   mobileUl: {
     listStyle: 'none',
     display: 'flex',
     flexDirection: 'column',
-    gap: '1.25rem',
+    gap: '1rem',
     alignItems: 'center'
   },
   mobileLink: {
     textDecoration: 'none',
-    fontSize: '1.1rem',
+    fontSize: '1.05rem',
     fontWeight: '600'
   }
 };
