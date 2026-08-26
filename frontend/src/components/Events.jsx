@@ -200,41 +200,41 @@ END:VCALENDAR`;
 
 const styles = {
   section: {
-    padding: '3.5rem 1rem',
+    padding: '2.5rem 1rem',
     backgroundColor: '#FAF6EE'
   },
   container: {
-    maxWidth: '850px',
+    maxWidth: '750px',
     margin: '0 auto',
     textAlign: 'center'
   },
   headerBox: {
-    marginBottom: '2rem'
+    marginBottom: '1.5rem'
   },
   title: {
-    fontSize: 'clamp(1.8rem, 3.8vw, 2.6rem)',
+    fontSize: 'clamp(1.5rem, 3.2vw, 2.2rem)',
     color: 'var(--color-maroon)',
     margin: 0
   },
   subtitle: {
-    fontSize: '0.95rem',
+    fontSize: '0.88rem',
     color: 'var(--color-brown)',
     opacity: 0.85,
-    marginTop: '0.3rem'
+    marginTop: '0.2rem'
   },
   eventsWrapper: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '2rem',
+    gap: '1.5rem',
     alignItems: 'center'
   },
   unifiedEventCard: {
     width: '100%',
-    maxWidth: '580px',
+    maxWidth: '460px',
     backgroundColor: '#FCFBF5',
     border: '1.5px dashed var(--color-maroon)',
-    borderRadius: '18px',
-    padding: '1.6rem 1.2rem 1.25rem',
+    borderRadius: '16px',
+    padding: '1.1rem 0.85rem 0.9rem',
     boxShadow: 'var(--shadow-md)',
     position: 'relative',
     display: 'flex',
@@ -244,69 +244,69 @@ const styles = {
   },
   badge: {
     position: 'absolute',
-    top: '-12px',
+    top: '-11px',
     backgroundColor: 'var(--color-maroon)',
     color: 'var(--color-cream)',
-    padding: '0.25rem 1rem',
+    padding: '0.18rem 0.75rem',
     borderRadius: '20px',
-    fontSize: '0.75rem',
+    fontSize: '0.68rem',
     fontWeight: '700',
-    letterSpacing: '0.8px',
+    letterSpacing: '0.6px',
     border: '1px solid var(--color-gold)'
   },
   topCeremonyHeader: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '0.3rem',
-    marginBottom: '1rem'
+    gap: '0.2rem',
+    marginBottom: '0.5rem'
   },
   cardTitle: {
-    fontSize: 'clamp(1.3rem, 2.8vw, 1.8rem)',
+    fontSize: 'clamp(1.15rem, 2.2vw, 1.45rem)',
     color: 'var(--color-maroon)',
     margin: 0
   },
   ceremonySub: {
-    fontSize: '0.85rem',
+    fontSize: '0.78rem',
     color: 'var(--color-gold-dark)',
     fontStyle: 'italic'
   },
   dateTimeContainer: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '0.6rem',
+    gap: '0.4rem',
     width: '100%',
-    maxWidth: '440px',
-    margin: '0 auto 1rem'
+    maxWidth: '380px',
+    margin: '0 auto 0.6rem'
   },
   infoRow: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: '0.6rem',
-    padding: '0.5rem 0.85rem',
+    gap: '0.5rem',
+    padding: '0.35rem 0.6rem',
     backgroundColor: 'var(--color-white)',
-    borderRadius: '10px',
+    borderRadius: '8px',
     borderLeft: '3px solid var(--color-gold)',
     boxShadow: 'var(--shadow-sm)'
   },
   infoTextBold: {
-    fontSize: '0.92rem',
+    fontSize: '0.82rem',
     fontWeight: '600',
     color: 'var(--color-brown)'
   },
   inlineCalBtn: {
-    marginTop: '0.3rem',
-    padding: '0.35rem 0.85rem',
-    fontSize: '0.78rem'
+    marginTop: '0.2rem',
+    padding: '0.25rem 0.65rem',
+    fontSize: '0.72rem'
   },
   connectedDivider: {
     display: 'flex',
     alignItems: 'center',
-    gap: '0.75rem',
+    gap: '0.5rem',
     width: '100%',
-    maxWidth: '480px',
-    margin: '0.6rem 0 1.25rem'
+    maxWidth: '400px',
+    margin: '0.4rem 0 0.8rem'
   },
   divLine: {
     height: '1px',
@@ -314,49 +314,49 @@ const styles = {
     background: 'linear-gradient(90deg, transparent, var(--color-gold), transparent)'
   },
   divText: {
-    fontSize: '0.75rem',
+    fontSize: '0.68rem',
     fontWeight: '700',
     color: 'var(--color-gold-dark)',
-    letterSpacing: '1px',
+    letterSpacing: '0.8px',
     textTransform: 'uppercase'
   },
   venueLocationSection: {
     width: '100%',
-    maxWidth: '500px',
+    maxWidth: '420px',
     backgroundColor: 'var(--color-white)',
     border: '1px dashed var(--color-gold-light)',
-    borderRadius: '14px',
-    padding: '1.1rem 1rem',
+    borderRadius: '12px',
+    padding: '0.75rem 0.6rem',
     boxShadow: 'var(--shadow-sm)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '0.6rem'
+    gap: '0.4rem'
   },
   venueHeaderRow: {
     display: 'flex',
     alignItems: 'center',
-    gap: '0.4rem'
+    gap: '0.3rem'
   },
   venueName: {
-    fontSize: '1.15rem',
+    fontSize: '0.98rem',
     color: 'var(--color-maroon)',
     margin: 0
   },
   venueAddress: {
-    fontSize: '0.85rem',
+    fontSize: '0.78rem',
     color: 'var(--color-brown)',
     opacity: 0.9,
-    maxWidth: '420px'
+    maxWidth: '380px'
   },
   mapContainer: {
     width: '100%',
-    height: '130px',
-    borderRadius: '10px',
+    height: '90px',
+    borderRadius: '8px',
     overflow: 'hidden',
     border: '1px solid var(--color-gold)',
     boxShadow: 'var(--shadow-sm)',
-    margin: '0.3rem 0'
+    margin: '0.2rem 0'
   },
   iframe: {
     width: '100%',
@@ -364,11 +364,11 @@ const styles = {
     border: 0
   },
   directionsBtn: {
-    marginTop: '0.3rem',
+    marginTop: '0.2rem',
     width: '100%',
-    maxWidth: '240px',
-    height: '32px',
-    fontSize: '0.78rem'
+    maxWidth: '200px',
+    height: '28px',
+    fontSize: '0.72rem'
   }
 };
 
