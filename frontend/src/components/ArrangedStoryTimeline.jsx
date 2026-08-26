@@ -62,7 +62,6 @@ const ArrangedStoryTimeline = ({ lang }) => {
                     <SikkuKolamCardBorder />
 
                     <div style={styles.cardTagRow}>
-                      <span style={styles.stepTag}>{item.tag}</span>
                       <span style={styles.calligraphicTag}>{item.calligraphicTag}</span>
                     </div>
 
