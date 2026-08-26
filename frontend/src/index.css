@@ -73,6 +73,8 @@ body.lang-en h4 {
   min-height: 100vh;
   overflow-x: hidden !important;
   position: relative;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 /* Make all main sections transparent so maroon kolams, dots, and lines are clearly visible throughout */
@@ -90,7 +92,7 @@ img, iframe, svg {
   background-image: radial-gradient(#9B3245 1px, transparent 1px) !important;
   background-size: 24px 24px !important;
   color: var(--color-ivory) !important;
-  border: 2px solid var(--color-gold) !important;
+  border: 1.5px dashed var(--color-gold) !important;
 }
 
 .terracotta-card h3,
@@ -104,6 +106,17 @@ img, iframe, svg {
   word-break: normal !important;
   overflow-wrap: normal !important;
   hyphens: none !important;
+}
+
+/* Enforce Maroon Dotted/Dashed Line Border on Every Card Container */
+.storyCard,
+div[style*="unifiedEventCard"],
+div[style*="invitationCard"],
+div[style*="contentCard"],
+div[style*="feastSubCard"] {
+  border: 1.5px dashed var(--color-maroon) !important;
+  box-shadow: 0 8px 24px rgba(107, 30, 45, 0.08) !important;
+  overflow: hidden !important;
 }
 
 /* Luxury Dividers & Maroon Ornaments */
@@ -288,6 +301,7 @@ img, iframe, svg {
   min-width: 0 !important;
   padding: 0.4rem 0.2rem !important;
   border-radius: 8px !important;
+  border: 1px dashed rgba(198, 161, 91, 0.6) !important;
 }
 
 /* Single Horizontal Line Couple Names in Our Story Card */
@@ -344,7 +358,7 @@ img, iframe, svg {
     font-size: clamp(18px, 5vw, 22px) !important;
   }
 
-  /* 4. Single-Column Mobile Timeline & Full-Width Cards */
+  /* 4. Single-Column Mobile Timeline & Full-Width Cards Fitting Inside Maroon Dotted Border */
   .story-main-section {
     scroll-margin-top: 70px !important;
     padding-top: 1.2rem !important;
@@ -381,6 +395,7 @@ img, iframe, svg {
   .storyCard {
     padding: 1.25rem 0.85rem !important;
     border-radius: 14px !important;
+    border: 1.5px dashed var(--color-maroon) !important;
   }
 
   /* 5. Paragraph Text Readability & 0 Narrow Wraps */
@@ -408,6 +423,7 @@ img, iframe, svg {
     border-radius: 16px !important;
     width: min(100% - 24px, 430px) !important;
     margin: 0 auto !important;
+    border: 1.5px dashed var(--color-maroon) !important;
   }
   div[style*="venueLocationSection"] {
     padding: 0.85rem 0.6rem !important;
@@ -423,13 +439,15 @@ img, iframe, svg {
     font-size: 0.88rem !important;
   }
 
-  /* 7. Mobile Invitation & General Cards */
+  /* 7. Mobile Invitation & General Cards Fitting Inside Maroon Dotted Border */
   div[style*="invitationCard"],
+  div[style*="contentCard"],
   div[style*="card"] {
     width: min(100% - 24px, 430px) !important;
     margin: 0 auto !important;
     padding: 1.25rem 0.85rem !important;
     border-radius: 14px !important;
+    border: 1.5px dashed var(--color-maroon) !important;
   }
 
   /* 8. Single Horizontal Line Countdown Timer Digits */
