@@ -63,11 +63,8 @@ const Gallery = ({ lang }) => {
           <GopuramDivider />
         </div>
 
-        {/* Asymmetric Editorial Grid framed with Invitation Scrapbook Aesthetics */}
+        {/* Photo Gallery Grid */}
         <div style={styles.gridWrapper}>
-          <BananaLeafDecoration position="top-left" size={90} />
-          <BananaLeafDecoration position="bottom-right" size={90} />
-
           <div style={styles.asymmetricGrid}>
             {images.map((img, idx) => (
               <div
