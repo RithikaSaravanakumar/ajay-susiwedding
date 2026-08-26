@@ -141,7 +141,7 @@ function App() {
   return (
     <FullPageSikkuKolamFrame>
       <div className="app-container" style={{ position: 'relative' }}>
-        {/* Low Opacity Traditional Wedding Background Layer */}
+        {/* Full-Website Traditional Wedding Background Layer */}
         <div
           style={{
             position: 'fixed',
@@ -150,7 +150,7 @@ function App() {
             backgroundSize: 'cover',
             backgroundPosition: 'center top',
             backgroundRepeat: 'no-repeat',
-            opacity: 0.20,
+            opacity: 0.35,
             pointerEvents: 'none',
             zIndex: 0
           }}

@@ -73,6 +73,11 @@ body.lang-en h4 {
   position: relative;
 }
 
+/* Make all main sections transparent so background.jpg layer is clearly visible throughout */
+section {
+  background-color: transparent !important;
+}
+
 img, iframe, svg {
   max-width: 100%;
 }
