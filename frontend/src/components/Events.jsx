@@ -42,8 +42,8 @@ END:VCALENDAR`;
         <div style={styles.eventsWrapper}>
           {/* UNIFIED MUHURTHAM EVENT & VENUE LOCATION CARD */}
           <div style={styles.unifiedEventCard} className="reveal-scale delay-1">
-            <VazhaiMaramSide side="left" height={140} />
-            <VazhaiMaramSide side="right" height={140} />
+            <VazhaiMaramSide side="left" height={100} />
+            <VazhaiMaramSide side="right" height={100} />
 
             <div style={styles.badge}>{content.wedding.badge}</div>
 

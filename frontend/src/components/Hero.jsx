@@ -162,7 +162,7 @@ const styles = {
     position: 'relative',
     backgroundColor: '#FAF5EC',
     backgroundImage: 'none',
-    padding: '7.5rem 1.5rem 5rem',
+    padding: '5rem 1.5rem 3rem',
     overflow: 'hidden',
     textAlign: 'center'
   },

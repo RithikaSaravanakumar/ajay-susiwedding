@@ -77,15 +77,25 @@ body.lang-en h4 {
   padding-right: 10px;
 }
 
-/* Remove dots in starting hero section alone */
-.hero-main-section {
-  background-image: none !important;
-  background-color: #FAF5EC !important;
+/* Ensure navbar never covers section headings when navigating */
+section,
+#home,
+#story,
+#invitation,
+#couple,
+#events,
+#gallery,
+#rsvp {
+  scroll-margin-top: 75px !important;
+  background-color: transparent !important;
 }
 
-/* Make all main sections transparent so maroon kolams, dots, and lines are clearly visible throughout */
-section {
-  background-color: transparent !important;
+/* Hero Section Top Clearance so Fixed Navbar Never Covers Content */
+.hero-main-section {
+  margin-top: 60px !important;
+  padding-top: 2rem !important;
+  background-image: none !important;
+  background-color: #FAF5EC !important;
 }
 
 img, iframe, svg {
@@ -96,7 +106,7 @@ img, iframe, svg {
 .terracotta-card {
   background-color: var(--color-terracotta) !important;
   background-image: radial-gradient(#9B3245 1px, transparent 1px) !important;
-  background-size: 24px 24px !important;
+  background-size: 20px 20px !important;
   color: var(--color-ivory) !important;
   border: 1.5px dashed var(--color-gold) !important;
 }
@@ -356,16 +366,17 @@ div[style*="feastSubCard"] {
 
   /* 2. Hero Section Top Offset & Compact Height */
   .hero-main-section {
-    margin-top: 48px !important;
+    margin-top: 50px !important;
     min-height: 40vh !important;
     max-height: 52vh !important;
-    padding: 1rem 0.5rem 0.8rem !important;
+    padding: 1.2rem 0.5rem 0.8rem !important;
     background-image: none !important;
   }
 
   /* 3. Mobile Section Padding & Vertical Gaps */
   section {
     padding: 14px 6px !important;
+    scroll-margin-top: 58px !important;
   }
   div[style*="headerBox"] {
     margin-bottom: 0.6rem !important;
@@ -379,7 +390,7 @@ div[style*="feastSubCard"] {
 
   /* 4. Left-Aligned Vertical Timeline Line & Right-Aligned Milestone Cards */
   .story-main-section {
-    scroll-margin-top: 50px !important;
+    scroll-margin-top: 58px !important;
     padding-top: 0.5rem !important;
   }
   .timeline-center-line {
