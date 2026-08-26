@@ -73,8 +73,8 @@ body.lang-en h4 {
   min-height: 100vh;
   overflow-x: hidden !important;
   position: relative;
-  border-left: 3.5px dashed var(--color-maroon) !important;
-  border-right: 3.5px dashed var(--color-maroon) !important;
+  border-left: 3px dashed var(--color-maroon) !important;
+  border-right: 3px dashed var(--color-maroon) !important;
   border-top: none !important;
   border-bottom: none !important;
   padding-left: 18px;
@@ -82,12 +82,13 @@ body.lang-en h4 {
   box-sizing: border-box;
 }
 
-/* Second Layer of Dotted Lines on Left & Right Sides of Screen Alone */
+/* Continuous Uniform Dotted Layer on Left & Right Sides of Screen Alone */
 .app-container::before {
   content: '';
   position: absolute;
   top: 0;
   bottom: 0;
+  height: 100%;
   left: 6px;
   right: 6px;
   border-left: 3px dotted var(--color-maroon) !important;
@@ -95,7 +96,7 @@ body.lang-en h4 {
   border-top: none !important;
   border-bottom: none !important;
   pointer-events: none;
-  z-index: 5;
+  z-index: 10;
 }
 
 /* Ensure navbar never covers section headings when navigating */
