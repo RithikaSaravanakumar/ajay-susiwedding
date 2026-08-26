@@ -73,12 +73,12 @@ body.lang-en h4 {
   min-height: 100vh;
   overflow-x: hidden !important;
   position: relative;
-  border-left: 2px dashed var(--color-maroon) !important;
-  border-right: 2px dashed var(--color-maroon) !important;
+  border-left: 3.5px dashed var(--color-maroon) !important;
+  border-right: 3.5px dashed var(--color-maroon) !important;
   border-top: none !important;
   border-bottom: none !important;
-  padding-left: 14px;
-  padding-right: 14px;
+  padding-left: 18px;
+  padding-right: 18px;
   box-sizing: border-box;
 }
 
@@ -88,10 +88,10 @@ body.lang-en h4 {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 4px;
-  right: 4px;
-  border-left: 1.5px dotted var(--color-maroon) !important;
-  border-right: 1.5px dotted var(--color-maroon) !important;
+  left: 6px;
+  right: 6px;
+  border-left: 3px dotted var(--color-maroon) !important;
+  border-right: 3px dotted var(--color-maroon) !important;
   border-top: none !important;
   border-bottom: none !important;
   pointer-events: none;
@@ -110,7 +110,7 @@ section,
   scroll-margin-top: 85px !important;
 }
 
-/* Subtle Decorative Background Dots ONLY in Specific Mid-Section Card Blocks */
+/* Prominent Decorative Background Dots in Specific Mid-Section Card Blocks */
 #story,
 #invitation,
 #couple,
@@ -118,8 +118,8 @@ section,
 #gallery,
 .story-main-section,
 .countdown-section {
-  background-image: radial-gradient(rgba(107, 30, 45, 0.22) 1.2px, transparent 1.2px) !important;
-  background-size: 24px 24px !important;
+  background-image: radial-gradient(rgba(107, 30, 45, 0.28) 2px, transparent 2px) !important;
+  background-size: 26px 26px !important;
 }
 
 /* Completely Clean Background for Hero, Quotes, Header, RSVP, & End of Screen (Footer) */
