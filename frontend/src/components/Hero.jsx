@@ -199,7 +199,7 @@ const styles = {
     alignItems: 'flex-end',
     zIndex: 3,
     pointerEvents: 'none',
-    opacity: 0.95
+    opacity: 0.45
   },
   coupleWrapper: {
     marginLeft: '-40px',
@@ -211,7 +211,7 @@ const styles = {
     right: '15px',
     zIndex: 3,
     pointerEvents: 'none',
-    opacity: 0.95
+    opacity: 0.45
   },
   container: {
     position: 'relative',
