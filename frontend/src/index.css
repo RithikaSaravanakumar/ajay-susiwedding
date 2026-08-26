@@ -119,6 +119,18 @@ div[style*="feastSubCard"] {
   overflow: hidden !important;
 }
 
+/* Compact Countdown Main Card with Rounded Corners & Maroon Dotted Border */
+.countdown-main-card {
+  width: min(100% - 24px, 360px) !important;
+  max-width: 360px !important;
+  margin: 0 auto !important;
+  border-radius: 24px !important;
+  border: 1.5px dashed var(--color-maroon) !important;
+  padding: 1.25rem 0.85rem !important;
+  box-shadow: 0 10px 30px rgba(107, 30, 45, 0.1) !important;
+  overflow: hidden !important;
+}
+
 /* Luxury Dividers & Maroon Ornaments */
 .ornament-line-container {
   display: flex;
@@ -292,16 +304,16 @@ div[style*="feastSubCard"] {
   align-items: center !important;
   gap: 0.4rem !important;
   width: 100% !important;
-  max-width: 480px !important;
+  max-width: 340px !important;
   margin: 0 auto !important;
 }
 
 .countdown-timer-box {
   flex: 1 1 0px !important;
   min-width: 0 !important;
-  padding: 0.4rem 0.2rem !important;
-  border-radius: 8px !important;
-  border: 1px dashed rgba(198, 161, 91, 0.6) !important;
+  padding: 0.5rem 0.25rem !important;
+  border-radius: 14px !important;
+  border: 1.5px dashed var(--color-gold) !important;
 }
 
 /* Single Horizontal Line Couple Names in Our Story Card */
@@ -450,12 +462,22 @@ div[style*="feastSubCard"] {
     border: 1.5px dashed var(--color-maroon) !important;
   }
 
-  /* 8. Single Horizontal Line Countdown Timer Digits */
+  /* 8. Compact Rounded Countdown Main Card Mobile Proportions */
+  .countdown-main-card {
+    width: min(100% - 20px, 330px) !important;
+    max-width: 330px !important;
+    padding: 1rem 0.65rem !important;
+    border-radius: 20px !important;
+  }
+  .countdown-timer-box {
+    border-radius: 12px !important;
+    padding: 0.4rem 0.15rem !important;
+  }
   .countdown-timer-box span[style*="value"] {
-    font-size: 1.4rem !important;
+    font-size: 1.25rem !important;
   }
   .countdown-timer-box span[style*="label"] {
-    font-size: 0.72rem !important;
+    font-size: 0.68rem !important;
   }
 
   /* 9. Single Horizontal Line Couple Names in Our Story Card */

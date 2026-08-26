@@ -48,23 +48,25 @@ const Countdown = ({ lang }) => {
   return (
     <section style={styles.section}>
       <div style={styles.container} className="reveal-on-scroll">
-        <div style={styles.headerBox}>
-          <h2 style={styles.title}>{content.title}</h2>
-          <p style={styles.subtitle}>{content.subtitle}</p>
-          <GopuramDivider />
-        </div>
+        <div style={styles.cardContainer} className="countdown-main-card">
+          <div style={styles.headerBox}>
+            <h2 style={styles.title}>{content.title}</h2>
+            <p style={styles.subtitle}>{content.subtitle}</p>
+            <GopuramDivider />
+          </div>
 
-        <div style={styles.grid} className="countdown-grid-container">
-          {timeBlocks.map((block, idx) => (
-            <div key={idx} style={styles.card} className="countdown-timer-box reveal-scale delay-1">
-              <div style={styles.valueBox}>
-                <span style={styles.value}>
-                  {String(block.value).padStart(2, '0')}
-                </span>
+          <div style={styles.grid} className="countdown-grid-container">
+            {timeBlocks.map((block, idx) => (
+              <div key={idx} style={styles.card} className="countdown-timer-box reveal-scale delay-1">
+                <div style={styles.valueBox}>
+                  <span style={styles.value}>
+                    {String(block.value).padStart(2, '0')}
+                  </span>
+                </div>
+                <span style={styles.label}>{block.label}</span>
               </div>
-              <span style={styles.label}>{block.label}</span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -73,65 +75,72 @@ const Countdown = ({ lang }) => {
 
 const styles = {
   section: {
-    padding: '5.5rem 1.5rem',
-    background: 'linear-gradient(135deg, #5A1624 0%, #6B1E2D 50%, #4A121E 100%)',
-    color: '#FFF',
+    padding: '3.5rem 1rem',
     position: 'relative',
     overflow: 'hidden'
   },
   container: {
-    maxWidth: '900px',
+    maxWidth: '520px',
     margin: '0 auto',
     textAlign: 'center',
     position: 'relative',
     zIndex: 2
   },
+  cardContainer: {
+    backgroundColor: '#FAF5EC',
+    backgroundImage: 'radial-gradient(#6B1E2D 1px, transparent 1px)',
+    backgroundSize: '20px 20px',
+    border: '1.5px dashed var(--color-maroon)',
+    borderRadius: '24px',
+    padding: '2rem 1.25rem',
+    boxShadow: '0 10px 30px rgba(107, 30, 45, 0.1)',
+    maxWidth: '420px',
+    margin: '0 auto'
+  },
   headerBox: {
-    marginBottom: '3rem'
+    marginBottom: '1.5rem'
   },
   title: {
-    fontSize: 'clamp(2.4rem, 4.8vw, 3.4rem)',
-    color: 'var(--color-gold-light)',
+    fontSize: 'clamp(1.6rem, 3.8vw, 2.4rem)',
+    color: 'var(--color-maroon)',
     margin: 0
   },
   subtitle: {
-    fontSize: '1.1rem',
-    color: 'var(--color-cream)',
+    fontSize: '0.95rem',
+    color: 'var(--color-brown)',
     opacity: 0.9,
-    marginTop: '0.4rem'
+    marginTop: '0.3rem'
   },
   grid: {
     display: 'flex',
     justifyContent: 'center',
-    gap: '1.5rem',
-    flexWrap: 'wrap'
+    gap: '0.5rem',
+    flexWrap: 'nowrap'
   },
   card: {
-    background: 'rgba(255, 255, 255, 0.08)',
-    backdropFilter: 'blur(10px)',
-    border: '1.5px solid rgba(198, 161, 91, 0.4)',
+    backgroundColor: 'var(--color-terracotta)',
+    border: '1.5px dashed var(--color-gold)',
     borderRadius: '16px',
-    padding: '1.8rem 1.5rem',
-    minWidth: '135px',
+    padding: '0.8rem 0.4rem',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
-    transition: 'transform 0.3s ease, border-color 0.3s ease'
+    boxShadow: '0 6px 16px rgba(107, 30, 45, 0.15)',
+    transition: 'transform 0.3s ease'
   },
   valueBox: {
     lineHeight: 1,
-    marginBottom: '0.5rem'
+    marginBottom: '0.25rem'
   },
   value: {
     fontFamily: 'var(--font-en-display)',
-    fontSize: 'clamp(2.8rem, 5vw, 3.8rem)',
+    fontSize: 'clamp(1.5rem, 3.5vw, 2.2rem)',
     fontWeight: '700',
     color: 'var(--color-gold-light)',
-    letterSpacing: '1px'
+    letterSpacing: '0.5px'
   },
   label: {
-    fontSize: '1rem',
+    fontSize: '0.78rem',
     fontWeight: '600',
     color: 'var(--color-cream)'
   }
