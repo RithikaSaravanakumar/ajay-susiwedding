@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Mukta+Malar:wght@300;400;500;600;700&family=Noto+Serif+Tamil:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --color-cream: #F8F1E3;
+  --color-maroon: #6B1E2D;
+  --color-maroon-dark: #4A121E;
+  --color-maroon-light: #8C2C3E;
+  --color-terracotta: #7A2535;
+  --color-terracotta-dark: #581924;
+  --color-terracotta-light: #9B3245;
+  --color-green: #2E7D32;
+  --color-green-dark: #1B5E20;
+  --color-green-light: #81C784;
+  --color-gold: #C6A15B;
+  --color-gold-light: #E5CA8F;
+  --color-gold-dark: #9A7835;
+  --color-beige: #E8D8C3;
+  --color-brown: #2F211B;
+  --color-rose: #B98282;
+  --color-white: #FFFFFF;
+  --color-bg: #F8F1E3;
+  --color-card-bg: #FCF8F2;
+
+  --font-en-display: 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-en-body: 'Inter', sans-serif;
+  --font-ta-display: 'Noto Serif Tamil', 'Mukta Malar', serif;
+  --font-ta-body: 'Mukta Malar', sans-serif;
+
+  --shadow-sm: 0 4px 15px rgba(107, 30, 45, 0.05);
+  --shadow-md: 0 10px 30px rgba(107, 30, 45, 0.08);
+  --shadow-lg: 0 18px 45px rgba(107, 30, 45, 0.12);
+  --shadow-gold: 0 8px 25px rgba(198, 161, 91, 0.25);
+  --shadow-terracotta: 0 12px 35px rgba(122, 37, 53, 0.25);
+
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-brown);
+  font-family: var(--font-en-body);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tamil Typography Overrides */
+body.lang-ta {
+  font-family: var(--font-ta-body);
+}
+
+body.lang-ta h1,
+body.lang-ta h2,
+body.lang-ta h3,
+body.lang-ta h4,
+body.lang-ta .serif-text {
+  font-family: var(--font-ta-display);
+  letter-spacing: 0;
+}
+
+h1, h2, h3, h4, .serif-text {
+  font-family: var(--font-en-display);
+  font-weight: 600;
+  color: var(--color-maroon);
+}
+
+/* Terracotta Tamil Panel Styling */
+.terracotta-card {
+  background-color: var(--color-terracotta);
+  color: var(--color-cream);
+  border: 2px solid var(--color-gold);
+  border-radius: 18px;
+  box-shadow: var(--shadow-terracotta);
+  position: relative;
+  overflow: hidden;
+}
+
+.terracotta-card h3,
+.terracotta-card h4 {
+  color: var(--color-gold-light) !important;
+}
+
+.terracotta-card p {
+  color: var(--color-cream);
+  opacity: 0.95;
+}
+
+/* Luxury Dividers & Ornaments */
+.ornament-line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 1.5rem auto 2.5rem;
+  max-width: 320px;
+}
+
+.ornament-line {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+.ornament-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-gold);
+  transform: rotate(45deg);
+}
+
+/* Scroll Reveal Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-scale.is-revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger Delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* Luxury Buttons */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 100%);
+  color: var(--color-maroon-dark);
+  padding: 0.85rem 1.8rem;
+  border: 1px solid var(--color-gold-dark);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-gold);
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+  color: #FFF;
+}
+
+.btn-maroon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, var(--color-maroon) 0%, var(--color-maroon-dark) 100%);
+  color: var(--color-cream);
+  padding: 0.9rem 2rem;
+  border: 1px solid var(--color-gold);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-maroon:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, var(--color-maroon-light) 0%, var(--color-maroon) 100%);
+  border-color: var(--color-gold-light);
+}
+
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: transparent;
+  color: var(--color-maroon);
+  padding: 0.75rem 1.6rem;
+  border: 1.5px solid var(--color-gold);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-outline-gold:hover {
+  background: var(--color-gold);
+  color: var(--color-maroon-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Keyframes */
+@keyframes flameGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+    filter: drop-shadow(0 0 4px #F59E0B);
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #FBBF24);
+  }
+}
+
+.flame-glow {
+  animation: flameGlow 2s infinite ease-in-out;
+}
+
+@keyframes floatPetal {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(105vh) rotate(360deg) translateX(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Reduced Motion Compliance */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-scale,
+  .spin-slow,
+  .flame-glow,
+  .btn-gold,
+  .btn-maroon,
+  .btn-outline-gold {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-maroon);
+}
