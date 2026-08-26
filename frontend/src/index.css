@@ -89,32 +89,36 @@ section,
   scroll-margin-top: 85px !important;
 }
 
-/* Subtle Decorative Background Dots ONLY in Card-based Sections */
+/* Subtle Decorative Background Dots ONLY in Specific Mid-Section Card Blocks */
 #story,
 #invitation,
 #couple,
 #events,
 #gallery,
-#rsvp,
 .story-main-section,
 .countdown-section {
   background-image: radial-gradient(rgba(107, 30, 45, 0.22) 1.2px, transparent 1.2px) !important;
   background-size: 24px 24px !important;
 }
 
-/* Clean Non-Card Sections (Hero, Quotes, Header) Have Clean Ivory Background */
+/* Completely Clean Background for Hero, Quotes, Header, RSVP, & End of Screen (Footer) */
 #home,
 .hero-main-section,
 .quote-card-section,
-header.main-header {
+header.main-header,
+#rsvp,
+footer {
   background-image: none !important;
+}
+
+#rsvp {
   background-color: #FAF5EC !important;
 }
 
-/* Rich Maroon Background for Final Footer Section Below RSVP Form */
+/* Clean Rich Maroon Background for Final Footer Section Below RSVP Form (No Dots / Gradients) */
 footer {
   background-color: #6B1E2D !important;
-  background-image: radial-gradient(circle at 50% 50%, #6B1E2D 0%, #3A0C16 100%) !important;
+  background-image: none !important;
   color: var(--color-cream) !important;
   border-top: 2px solid var(--color-gold) !important;
 }
