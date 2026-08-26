@@ -15,47 +15,47 @@ export const FullPageSikkuKolamFrame = ({ children }) => (
     >
       <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Top Edge Kolam Line */}
-        <line x1="0" y1="12" x2="100%" y2="12" stroke="#C6A15B" strokeWidth="2" strokeDasharray="12 6" />
-        <line x1="0" y1="16" x2="100%" y2="16" stroke="#F8F1E3" strokeWidth="1" strokeDasharray="4 4" />
+        <line x1="0" y1="12" x2="100%" y2="12" stroke="#6B1E2D" strokeWidth="2" strokeDasharray="12 6" />
+        <line x1="0" y1="16" x2="100%" y2="16" stroke="#9A7835" strokeWidth="1" strokeDasharray="4 4" />
 
         {/* Bottom Edge Kolam Line */}
-        <line x1="0" y1="calc(100% - 12px)" x2="100%" y2="calc(100% - 12px)" stroke="#C6A15B" strokeWidth="2" strokeDasharray="12 6" />
-        <line x1="0" y1="calc(100% - 16px)" x2="100%" y2="calc(100% - 16px)" stroke="#F8F1E3" strokeWidth="1" strokeDasharray="4 4" />
+        <line x1="0" y1="calc(100% - 12px)" x2="100%" y2="calc(100% - 12px)" stroke="#6B1E2D" strokeWidth="2" strokeDasharray="12 6" />
+        <line x1="0" y1="calc(100% - 16px)" x2="100%" y2="calc(100% - 16px)" stroke="#9A7835" strokeWidth="1" strokeDasharray="4 4" />
 
         {/* Left Edge Kolam Line */}
-        <line x1="12" y1="0" x2="12" y2="100%" stroke="#C6A15B" strokeWidth="2" strokeDasharray="12 6" />
-        <line x1="16" y1="0" x2="16" y2="100%" stroke="#F8F1E3" strokeWidth="1" strokeDasharray="4 4" />
+        <line x1="12" y1="0" x2="12" y2="100%" stroke="#6B1E2D" strokeWidth="2" strokeDasharray="12 6" />
+        <line x1="16" y1="0" x2="16" y2="100%" stroke="#9A7835" strokeWidth="1" strokeDasharray="4 4" />
 
         {/* Right Edge Kolam Line */}
-        <line x1="calc(100% - 12px)" y1="0" x2="calc(100% - 12px)" y2="100%" stroke="#C6A15B" strokeWidth="2" strokeDasharray="12 6" />
-        <line x1="calc(100% - 16px)" y1="0" x2="calc(100% - 16px)" y2="100%" stroke="#F8F1E3" strokeWidth="1" strokeDasharray="4 4" />
+        <line x1="calc(100% - 12px)" y1="0" x2="calc(100% - 12px)" y2="100%" stroke="#6B1E2D" strokeWidth="2" strokeDasharray="12 6" />
+        <line x1="calc(100% - 16px)" y1="0" x2="calc(100% - 16px)" y2="100%" stroke="#9A7835" strokeWidth="1" strokeDasharray="4 4" />
 
         {/* Top-Left Sikku Corner Loop */}
         <g transform="translate(12, 12)">
-          <circle cx="20" cy="20" r="16" fill="none" stroke="#C6A15B" strokeWidth="2" />
-          <circle cx="20" cy="20" r="6" fill="#6B1E2D" />
-          <path d="M4 20 Q20 4 36 20 Q20 36 4 20 Z" fill="none" stroke="#F8F1E3" strokeWidth="1.5" />
+          <circle cx="20" cy="20" r="16" fill="none" stroke="#6B1E2D" strokeWidth="2" />
+          <circle cx="20" cy="20" r="6" fill="#C6A15B" />
+          <path d="M4 20 Q20 4 36 20 Q20 36 4 20 Z" fill="none" stroke="#6B1E2D" strokeWidth="1.5" />
         </g>
 
         {/* Top-Right Sikku Corner Loop */}
         <g transform="translate(calc(100% - 52px), 12)">
-          <circle cx="20" cy="20" r="16" fill="none" stroke="#C6A15B" strokeWidth="2" />
-          <circle cx="20" cy="20" r="6" fill="#6B1E2D" />
-          <path d="M4 20 Q20 4 36 20 Q20 36 4 20 Z" fill="none" stroke="#F8F1E3" strokeWidth="1.5" />
+          <circle cx="20" cy="20" r="16" fill="none" stroke="#6B1E2D" strokeWidth="2" />
+          <circle cx="20" cy="20" r="6" fill="#C6A15B" />
+          <path d="M4 20 Q20 4 36 20 Q20 36 4 20 Z" fill="none" stroke="#6B1E2D" strokeWidth="1.5" />
         </g>
 
         {/* Bottom-Left Sikku Corner Loop */}
         <g transform="translate(12, calc(100% - 52px))">
-          <circle cx="20" cy="20" r="16" fill="none" stroke="#C6A15B" strokeWidth="2" />
-          <circle cx="20" cy="20" r="6" fill="#6B1E2D" />
-          <path d="M4 20 Q20 4 36 20 Q20 36 4 20 Z" fill="none" stroke="#F8F1E3" strokeWidth="1.5" />
+          <circle cx="20" cy="20" r="16" fill="none" stroke="#6B1E2D" strokeWidth="2" />
+          <circle cx="20" cy="20" r="6" fill="#C6A15B" />
+          <path d="M4 20 Q20 4 36 20 Q20 36 4 20 Z" fill="none" stroke="#6B1E2D" strokeWidth="1.5" />
         </g>
 
         {/* Bottom-Right Sikku Corner Loop */}
         <g transform="translate(calc(100% - 52px), calc(100% - 52px))">
-          <circle cx="20" cy="20" r="16" fill="none" stroke="#C6A15B" strokeWidth="2" />
-          <circle cx="20" cy="20" r="6" fill="#6B1E2D" />
-          <path d="M4 20 Q20 4 36 20 Q20 36 4 20 Z" fill="none" stroke="#F8F1E3" strokeWidth="1.5" />
+          <circle cx="20" cy="20" r="16" fill="none" stroke="#6B1E2D" strokeWidth="2" />
+          <circle cx="20" cy="20" r="6" fill="#C6A15B" />
+          <path d="M4 20 Q20 4 36 20 Q20 36 4 20 Z" fill="none" stroke="#6B1E2D" strokeWidth="1.5" />
         </g>
       </svg>
     </div>

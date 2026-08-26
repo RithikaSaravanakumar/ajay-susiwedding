@@ -41,7 +41,9 @@ html, body {
   max-width: 100vw;
   overflow-x: hidden !important;
   scroll-behavior: smooth;
-  background-color: var(--color-terracotta);
+  background-color: #FAF5EC !important;
+  background-image: radial-gradient(#6B1E2D 1.2px, transparent 1.2px) !important;
+  background-size: 24px 24px !important;
   color: var(--color-brown-dark);
   font-family: var(--font-en-body);
   -webkit-font-smoothing: antialiased;
@@ -73,7 +75,7 @@ body.lang-en h4 {
   position: relative;
 }
 
-/* Make all main sections transparent so background.jpg layer is clearly visible throughout */
+/* Make all main sections transparent so maroon kolams, dots, and lines are clearly visible throughout */
 section {
   background-color: transparent !important;
 }
@@ -104,7 +106,7 @@ img, iframe, svg {
   hyphens: none !important;
 }
 
-/* Luxury Dividers & Ornaments */
+/* Luxury Dividers & Maroon Ornaments */
 .ornament-line-container {
   display: flex;
   align-items: center;
@@ -115,15 +117,15 @@ img, iframe, svg {
 }
 
 .ornament-line {
-  height: 1px;
+  height: 1.5px;
   flex: 1;
-  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  background: linear-gradient(90deg, transparent, var(--color-maroon), transparent);
 }
 
 .ornament-dot {
   width: 6px;
   height: 6px;
-  background-color: var(--color-gold);
+  background-color: var(--color-maroon);
   transform: rotate(45deg);
 }
 
