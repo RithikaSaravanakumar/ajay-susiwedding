@@ -69,31 +69,16 @@ const Gallery = ({ lang }) => {
           <BananaLeafDecoration position="bottom-right" size={90} />
 
           <div style={styles.asymmetricGrid}>
-            {/* Feature Image (Larger) */}
-            <div
-              style={{ ...styles.gridCard, gridColumn: 'span 2', gridRow: 'span 2' }}
-              onClick={() => openLightbox(0)}
-              className="reveal-scale delay-1"
-            >
-              <div style={{ position: 'absolute', top: 8, left: 8, zIndex: 3 }}><KolamCorner position="top-left" /></div>
-              <img src={images[0].url} alt={images[0].caption} style={styles.img} />
-              <div style={styles.imgOverlay}>
-                <Maximize2 size={24} color="#FFF" />
-                <span style={styles.overlayText}>{images[0].caption}</span>
-              </div>
-            </div>
-
-            {/* Supporting Images */}
-            {images.slice(1).map((img, idx) => (
+            {images.map((img, idx) => (
               <div
-                key={idx + 1}
+                key={idx}
                 style={styles.gridCard}
-                onClick={() => openLightbox(idx + 1)}
-                className={`reveal-scale delay-${idx + 2}`}
+                onClick={() => openLightbox(idx)}
+                className={`reveal-scale delay-${idx + 1}`}
               >
                 <img src={img.url} alt={img.caption} style={styles.img} />
                 <div style={styles.imgOverlay}>
-                  <Maximize2 size={20} color="#FFF" />
+                  <Maximize2 size={16} color="#FFF" />
                   <span style={styles.overlayText}>{img.caption}</span>
                 </div>
               </div>
@@ -135,60 +120,62 @@ const Gallery = ({ lang }) => {
 
 const styles = {
   section: {
-    padding: '5.5rem 1.5rem',
+    padding: '2.5rem 1rem',
     backgroundColor: '#FAF5EC',
     position: 'relative'
   },
   container: {
-    maxWidth: '1100px',
+    maxWidth: '650px',
     margin: '0 auto',
     textAlign: 'center'
   },
   headerBox: {
-    marginBottom: '3rem'
+    marginBottom: '1.5rem'
   },
   badgeRow: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: '0.5rem',
-    marginBottom: '0.5rem'
+    gap: '0.4rem',
+    marginBottom: '0.4rem'
   },
   tagBadge: {
-    fontSize: '0.8rem',
+    fontSize: '0.72rem',
     fontWeight: '700',
     color: 'var(--color-gold-dark)',
-    letterSpacing: '1.5px',
+    letterSpacing: '1.2px',
     textTransform: 'uppercase'
   },
   title: {
-    fontSize: 'clamp(2.4rem, 4.8vw, 3.4rem)',
+    fontSize: 'clamp(1.5rem, 3.2vw, 2.2rem)',
     color: 'var(--color-maroon)',
     margin: 0
   },
   subtitle: {
-    fontSize: '1.1rem',
+    fontSize: '0.88rem',
     color: 'var(--color-brown)',
     opacity: 0.85,
-    marginTop: '0.4rem'
+    marginTop: '0.2rem'
   },
   gridWrapper: {
     position: 'relative',
-    padding: '1rem',
+    padding: '0.75rem',
     backgroundColor: 'var(--color-white)',
-    border: '2px solid var(--color-gold)',
-    borderRadius: '20px',
-    boxShadow: 'var(--shadow-md)'
+    border: '1.5px dashed var(--color-maroon)',
+    borderRadius: '16px',
+    boxShadow: 'var(--shadow-md)',
+    maxWidth: '420px',
+    margin: '0 auto'
   },
   asymmetricGrid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-    gap: '1.25rem',
-    gridAutoRows: '220px'
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    gap: '0.65rem',
+    gridAutoRows: '130px'
   },
   gridCard: {
     position: 'relative',
-    borderRadius: '12px',
+    borderRadius: '10px',
     overflow: 'hidden',
     cursor: 'pointer',
     boxShadow: 'var(--shadow-sm)',
@@ -208,15 +195,15 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
-    padding: '1.25rem',
+    padding: '0.65rem',
     opacity: 0,
     transition: 'opacity 0.4s ease',
     color: '#FFF'
   },
   overlayText: {
-    fontSize: '0.95rem',
+    fontSize: '0.75rem',
     fontWeight: '600',
-    marginTop: '0.5rem'
+    marginTop: '0.2rem'
   },
   lightboxModal: {
     position: 'fixed',

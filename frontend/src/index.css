@@ -529,12 +529,12 @@ div[style*="feastSubCard"] {
     justify-content: center !important;
   }
 
-  /* 7. REDUCE PHOTO GALLERY (Compact 2 x 2 Grid) */
+  /* 7. REDUCE PHOTO GALLERY (COMPACT 2 x 2 GRID) */
   div[style*="asymmetricGrid"] {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    grid-auto-rows: 110px !important;
-    gap: 8px !important;
+    grid-auto-rows: 90px !important;
+    gap: 6px !important;
   }
   div[style*="asymmetricGrid"] > div {
     grid-column: span 1 !important;
@@ -543,9 +543,9 @@ div[style*="feastSubCard"] {
     box-shadow: none !important;
   }
   div[style*="gridWrapper"] {
-    padding: 8px !important;
-    width: min(100% - 16px, 290px) !important;
-    max-width: 290px !important;
+    padding: 6px !important;
+    width: min(100% - 16px, 230px) !important;
+    max-width: 230px !important;
     margin: 0 auto !important;
     border-radius: 12px !important;
     border: 1.5px dashed var(--color-maroon) !important;
