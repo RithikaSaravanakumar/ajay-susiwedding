@@ -275,12 +275,12 @@ export const JasmineGarland = ({ side = 'left' }) => {
       style={{
         position: 'absolute',
         top: 0,
-        [isRight ? 'right' : 'left']: '10px',
+        [isRight ? 'right' : 'left']: '2px',
         height: '100%',
-        width: '30px',
+        width: '28px',
         pointerEvents: 'none',
         zIndex: 5,
-        opacity: 0.85
+        opacity: 0.9
       }}
     >
       <svg viewBox="0 0 30 400" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%' }}>
