@@ -405,7 +405,7 @@ div[style*="feastSubCard"] {
     margin-top: 2rem !important;
   }
 
-  /* 3. Mobile Section Spacing (40–56px section padding & 20-28px card gaps) */
+  /* 3. Mobile Section Spacing */
   section {
     padding: 38px 8px !important;
     scroll-margin-top: 60px !important;
@@ -420,7 +420,7 @@ div[style*="feastSubCard"] {
     font-size: clamp(16px, 4vw, 19px) !important;
   }
 
-  /* 4. Left-Aligned Vertical Timeline Line & Right-Aligned Milestone Cards (UNTOUCHED PROMINENCE & READABILITY) */
+  /* 4. Left-Aligned Vertical Timeline Line & Right-Aligned Milestone Cards */
   .story-main-section {
     scroll-margin-top: 60px !important;
     padding-top: 1rem !important;
@@ -472,7 +472,7 @@ div[style*="feastSubCard"] {
     border: 1.5px dashed var(--color-maroon) !important;
   }
 
-  /* 5. Mobile Typography & Natural Text Wrapping (0 one-word per line wraps) */
+  /* 5. Mobile Typography & Natural Text Wrapping */
   p, span, div, label, input, select, textarea, button {
     word-break: normal !important;
     overflow-wrap: normal !important;
@@ -493,15 +493,15 @@ div[style*="feastSubCard"] {
     font-size: 0.72rem !important;
   }
 
-  /* 6. REDUCE AUSPICIOUS EVENTS & LOCATIONS CARD SIZE, PADDING & FONTS */
+  /* 6. REDUCE MAIN CEREMONY & GRAND EVENING CARDS (ONLY WIDTH: 220px) */
   div[style*="eventsWrapper"] {
     gap: 0.85rem !important;
   }
   div[style*="unifiedEventCard"] {
     padding: 8px 6px !important;
     border-radius: 12px !important;
-    width: min(100% - 16px, 260px) !important;
-    max-width: 260px !important;
+    width: min(100% - 16px, 220px) !important;
+    max-width: 220px !important;
     margin: 0 auto !important;
     border: 1.5px dashed var(--color-maroon) !important;
     height: auto !important;
@@ -511,10 +511,10 @@ div[style*="feastSubCard"] {
     margin-bottom: 0.4rem !important;
   }
   .cardTitle {
-    font-size: clamp(15px, 4vw, 17px) !important;
+    font-size: clamp(14px, 3.8vw, 16px) !important;
   }
   .ceremonySub {
-    font-size: clamp(11px, 3vw, 12.5px) !important;
+    font-size: clamp(11px, 3vw, 12px) !important;
   }
   div[style*="dateTimeContainer"] {
     gap: 0.3rem !important;
@@ -524,7 +524,7 @@ div[style*="feastSubCard"] {
     padding: 0.3rem 0.45rem !important;
   }
   .infoTextBold {
-    font-size: clamp(11px, 3vw, 12.5px) !important;
+    font-size: clamp(11px, 3vw, 12px) !important;
   }
   div[style*="connectedDivider"] {
     margin: 0.3rem 0 0.5rem !important;
@@ -535,10 +535,10 @@ div[style*="feastSubCard"] {
     gap: 0.3rem !important;
   }
   .venueName {
-    font-size: clamp(14px, 3.8vw, 16px) !important;
+    font-size: clamp(13px, 3.5vw, 15px) !important;
   }
   .venueAddress {
-    font-size: clamp(11px, 3vw, 12.5px) !important;
+    font-size: clamp(11px, 3vw, 12px) !important;
     line-height: 1.35 !important;
   }
   div[style*="mapContainer"] {
@@ -555,7 +555,7 @@ div[style*="feastSubCard"] {
     justify-content: center !important;
   }
 
-  /* 7. REDUCE PHOTO GALLERY (COMPACT 2 x 2 GRID) */
+  /* 7. REDUCE PHOTO GALLERY */
   div[style*="asymmetricGrid"] {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
@@ -614,11 +614,11 @@ div[style*="feastSubCard"] {
     margin-top: 0.4rem !important;
   }
 
-  /* 9. REDUCE GENERAL OTHER MOBILE CARDS (Excepting Invitation, Countdown, Timeline) */
+  /* 9. REDUCE OUR STORY CARD & GENERAL OTHER MOBILE CARDS (ONLY WIDTH: 220px) */
   div[style*="contentCard"],
   #couple div[style*="card"] {
-    width: min(100% - 16px, 290px) !important;
-    max-width: 290px !important;
+    width: min(100% - 16px, 220px) !important;
+    max-width: 220px !important;
     margin: 0 auto !important;
     padding: 12px 10px !important;
     border-radius: 12px !important;

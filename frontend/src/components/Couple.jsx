@@ -82,7 +82,9 @@ const styles = {
     padding: '3.5rem 2.5rem',
     boxShadow: 'var(--shadow-md)',
     position: 'relative',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    maxWidth: '480px',
+    margin: '0 auto'
   },
   watermark: {
     position: 'absolute',
