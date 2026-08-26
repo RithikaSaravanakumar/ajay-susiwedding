@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { siteData } from '../config/data';
 import Monogram from './Monogram';
 import { GopuramDivider } from './Motifs';
-import { Send, CheckCircle2, AlertCircle, Users, Phone, User, Calendar, MessageSquare, Sparkles } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle, Users, Phone, User, Calendar, MessageSquare, Sparkles, X } from 'lucide-react';
 
 const RSVP = ({ lang }) => {
   const content = siteData[lang].rsvp;
@@ -19,20 +19,30 @@ const RSVP = ({ lang }) => {
   const [status, setStatus] = useState(null); // 'submitting', 'success', 'error'
   const [errorDetails, setErrorDetails] = useState('');
 
+  // Handle browser back button / swipe back so it only closes modal without exiting Chrome
   useEffect(() => {
-    const handlePopState = () => {
-      if (status === 'success') {
+    if (status === 'success') {
+      window.history.pushState({ modalOpen: true }, '');
+
+      const handlePopState = () => {
         setStatus(null);
-      }
-    };
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
+      };
+
+      window.addEventListener('popstate', handlePopState);
+      return () => {
+        window.removeEventListener('popstate', handlePopState);
+      };
+    }
   }, [status]);
 
-  const handleCloseModal = () => {
+  const handleCloseModal = (e) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     setStatus(null);
-    if (window.location.hash === '#rsvp-confirmed') {
-      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    if (window.history.state && window.history.state.modalOpen) {
+      window.history.back();
     }
   };
 
@@ -70,7 +80,6 @@ const RSVP = ({ lang }) => {
 
       if (response.ok) {
         setStatus('success');
-        window.history.pushState({ rsvpPopup: true }, '', '#rsvp-confirmed');
         setFormData({ name: '', phone: '', guests: 1, event: 'both', message: '' });
       } else {
         const errorData = await response.json().catch(() => ({}));
@@ -216,6 +225,16 @@ const RSVP = ({ lang }) => {
       {status === 'success' && createPortal(
         <div style={styles.successModal} onClick={handleCloseModal}>
           <div style={styles.successCard} className="rsvp-success-card" onClick={(e) => e.stopPropagation()}>
+            {/* Top-Right Exit Icon */}
+            <button
+              type="button"
+              style={styles.modalCloseBtn}
+              onClick={handleCloseModal}
+              aria-label="Close Modal"
+            >
+              <X size={22} color="var(--color-maroon)" />
+            </button>
+
             <Monogram size="lg" />
             <div style={styles.sparkleIconBox}>
               <Sparkles size={36} color="var(--color-gold)" />
@@ -224,6 +243,7 @@ const RSVP = ({ lang }) => {
             <p style={styles.successText}>{content.successMsg}</p>
 
             <button
+              type="button"
               onClick={handleCloseModal}
               className="btn-gold"
               style={styles.doneBtn}
@@ -374,6 +394,20 @@ const styles = {
     gap: '1rem',
     position: 'relative',
     zIndex: 1000000
+  },
+  modalCloseBtn: {
+    position: 'absolute',
+    top: '12px',
+    right: '12px',
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    padding: '6px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '50%',
+    zIndex: 10
   },
   sparkleIconBox: {
     marginTop: '0.3rem'
