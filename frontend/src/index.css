@@ -73,13 +73,29 @@ body.lang-en h4 {
   min-height: 100vh;
   overflow-x: hidden !important;
   position: relative;
-  border-left: 2.5px dashed var(--color-maroon) !important;
-  border-right: 2.5px dashed var(--color-maroon) !important;
+  border-left: 2px dashed var(--color-maroon) !important;
+  border-right: 2px dashed var(--color-maroon) !important;
   border-top: none !important;
   border-bottom: none !important;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
   box-sizing: border-box;
+}
+
+/* Second Layer of Dotted Lines on Left & Right Sides of Screen Alone */
+.app-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 4px;
+  right: 4px;
+  border-left: 1.5px dotted var(--color-maroon) !important;
+  border-right: 1.5px dotted var(--color-maroon) !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  pointer-events: none;
+  z-index: 5;
 }
 
 /* Ensure navbar never covers section headings when navigating */
