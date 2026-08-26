@@ -226,6 +226,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '1.25rem',
+    marginTop: '3.5rem',
     marginBottom: '0.5rem'
   },
   tagBadge: {

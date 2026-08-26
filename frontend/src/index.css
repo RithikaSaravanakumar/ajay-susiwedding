@@ -86,16 +86,20 @@ section,
 #events,
 #gallery,
 #rsvp {
-  scroll-margin-top: 75px !important;
+  scroll-margin-top: 85px !important;
   background-color: transparent !important;
 }
 
-/* Hero Section Top Clearance so Fixed Navbar Never Covers Content */
+/* Hero Section Top Clearance so Fixed Navbar Never Covers Lamp or A♥S Logo */
 .hero-main-section {
-  margin-top: 60px !important;
-  padding-top: 2rem !important;
+  margin-top: 64px !important;
+  padding-top: 3.5rem !important;
   background-image: none !important;
   background-color: #FAF5EC !important;
+}
+
+div[style*="topIconBox"] {
+  margin-top: 3rem !important;
 }
 
 img, iframe, svg {
@@ -364,19 +368,21 @@ div[style*="feastSubCard"] {
     min-width: 0;
   }
 
-  /* 2. Hero Section Top Offset & Compact Height */
+  /* 2. Hero Section Top Clearance (Never Hides Lamp & A♥S Monogram) */
   .hero-main-section {
-    margin-top: 50px !important;
+    margin-top: 48px !important;
     min-height: 40vh !important;
-    max-height: 52vh !important;
-    padding: 1.2rem 0.5rem 0.8rem !important;
+    padding: 2.2rem 0.5rem 0.8rem !important;
     background-image: none !important;
+  }
+  div[style*="topIconBox"] {
+    margin-top: 2rem !important;
   }
 
   /* 3. Mobile Section Padding & Vertical Gaps */
   section {
     padding: 14px 6px !important;
-    scroll-margin-top: 58px !important;
+    scroll-margin-top: 60px !important;
   }
   div[style*="headerBox"] {
     margin-bottom: 0.6rem !important;
@@ -390,7 +396,7 @@ div[style*="feastSubCard"] {
 
   /* 4. Left-Aligned Vertical Timeline Line & Right-Aligned Milestone Cards */
   .story-main-section {
-    scroll-margin-top: 58px !important;
+    scroll-margin-top: 60px !important;
     padding-top: 0.5rem !important;
   }
   .timeline-center-line {
