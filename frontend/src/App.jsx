@@ -11,7 +11,6 @@ import Gallery from './components/Gallery';
 import RSVP from './components/RSVP';
 import Footer from './components/Footer';
 import MusicPlayer from './components/MusicPlayer';
-import { FullPageSikkuKolamFrame } from './components/Motifs';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import { siteData } from './config/data';
 
@@ -136,56 +135,54 @@ function App() {
   const quotes = siteData[lang].quotes || [];
 
   return (
-    <FullPageSikkuKolamFrame>
-      <div className="app-container" style={{ position: 'relative' }}>
-        {/* Continuous Full-Website Falling Flowers Canvas */}
-        <FullPageFallingPetals />
+    <div className="app-container" style={{ position: 'relative' }}>
+      {/* Continuous Full-Website Falling Flowers Canvas */}
+      <FullPageFallingPetals />
 
-        {/* Sticky Header Nav with Language Switcher */}
-        <Header lang={lang} setLang={setLang} />
+      {/* Sticky Header Nav with Language Switcher */}
+      <Header lang={lang} setLang={setLang} />
 
-        <main style={{ position: 'relative', zIndex: 1 }}>
-          {/* Fullscreen Hero */}
-          <Hero lang={lang} />
+      <main style={{ position: 'relative', zIndex: 1 }}>
+        {/* Fullscreen Hero */}
+        <Hero lang={lang} />
 
-          {/* Live Countdown Timer (In the Beginning) */}
-          <Countdown lang={lang} />
+        {/* Live Countdown Timer (In the Beginning) */}
+        <Countdown lang={lang} />
 
-          {/* Digital Luxury Invitation Card */}
-          <Invitation lang={lang} />
+        {/* Digital Luxury Invitation Card */}
+        <Invitation lang={lang} />
 
-          {/* Quote Card 1 */}
-          {quotes[0] && <QuoteCard text={quotes[0]} lang={lang} />}
+        {/* Quote Card 1 */}
+        {quotes[0] && <QuoteCard text={quotes[0]} lang={lang} />}
 
-          {/* Arranged Marriage Story Timeline */}
-          <ArrangedStoryTimeline lang={lang} />
+        {/* Arranged Marriage Story Timeline */}
+        <ArrangedStoryTimeline lang={lang} />
 
-          {/* Quote Card 2 */}
-          {quotes[1] && <QuoteCard text={quotes[1]} lang={lang} />}
+        {/* Quote Card 2 */}
+        {quotes[1] && <QuoteCard text={quotes[1]} lang={lang} />}
 
-          {/* Couple Story */}
-          <Couple lang={lang} />
+        {/* Couple Story */}
+        <Couple lang={lang} />
 
-          {/* Wedding Events (Muhurtham & Reception Integrated with Locations & Maps) */}
-          <Events lang={lang} />
+        {/* Wedding Events (Muhurtham & Reception Integrated with Locations & Maps) */}
+        <Events lang={lang} />
 
-          {/* Photo Gallery & Lightbox */}
-          <Gallery lang={lang} />
+        {/* Photo Gallery & Lightbox */}
+        <Gallery lang={lang} />
 
-          {/* Quote Card 3 */}
-          {quotes[2] && <QuoteCard text={quotes[2]} lang={lang} />}
+        {/* Quote Card 3 */}
+        {quotes[2] && <QuoteCard text={quotes[2]} lang={lang} />}
 
-          {/* RSVP Registration */}
-          <RSVP lang={lang} />
-        </main>
+        {/* RSVP Registration */}
+        <RSVP lang={lang} />
+      </main>
 
-        {/* Footer & Final Blessing */}
-        <Footer lang={lang} style={{ position: 'relative', zIndex: 1 }} />
+      {/* Footer & Final Blessing */}
+      <Footer lang={lang} style={{ position: 'relative', zIndex: 1 }} />
 
-        {/* Ambient Audio Player Toggle */}
-        <MusicPlayer lang={lang} />
-      </div>
-    </FullPageSikkuKolamFrame>
+      {/* Ambient Audio Player Toggle */}
+      <MusicPlayer lang={lang} />
+    </div>
   );
 }
 
