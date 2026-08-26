@@ -122,7 +122,7 @@ export const SikkuKolamCardBorder = ({ color = '#C6A15B' }) => (
 );
 
 // 4. Golden South Indian Gopuram Temple Tower
-export const GoldenGopuramArtwork = ({ height = 110 }) => (
+export const GoldenGopuramArtwork = ({ height = 160 }) => (
   <div style={{ display: 'inline-block', opacity: 0.95 }}>
     <svg width={height * 0.75} height={height} viewBox="0 0 180 240" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="20" y="200" width="140" height="35" fill="#D4AF37" stroke="#9A7835" strokeWidth="1.5" />
@@ -152,7 +152,7 @@ export const GoldenGopuramArtwork = ({ height = 110 }) => (
 );
 
 // 5. Hand-Drawn Tamil Bride & Groom Illustration
-export const TamilCoupleIllustration = ({ height = 75 }) => (
+export const TamilCoupleIllustration = ({ height = 105 }) => (
   <div style={{ display: 'inline-block' }}>
     <svg width={height * 0.7} height={height} viewBox="0 0 105 150" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g transform="translate(48, 20)">
@@ -180,7 +180,7 @@ export const TamilCoupleIllustration = ({ height = 75 }) => (
 );
 
 // 6. Detailed Banana Tree with Fruit Cluster & Red Banana Flower (வாழை மரம்)
-export const VazhaiMaramFull = ({ height = 110 }) => (
+export const VazhaiMaramFull = ({ height = 160 }) => (
   <div style={{ display: 'inline-block', opacity: 0.95 }}>
     <svg width={height * 0.65} height={height} viewBox="0 0 130 230" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M55 230 Q60 140 65 40 Q62 140 70 230 Z" fill="#5D4037" stroke="#3E2723" strokeWidth="1.2" />

@@ -103,15 +103,15 @@ const Hero = ({ lang }) => {
       {/* Reference Scene Artwork Bottom Overlays */}
       {/* Bottom-Left: Golden Temple Gopuram + Tamil Bride & Groom */}
       <div style={styles.bottomLeftScene}>
-        <GoldenGopuramArtwork height={110} />
+        <GoldenGopuramArtwork height={160} />
         <div style={styles.coupleWrapper}>
-          <TamilCoupleIllustration height={70} />
+          <TamilCoupleIllustration height={105} />
         </div>
       </div>
 
       {/* Bottom-Right: Detailed Banana Tree (வாழை மரம்) with Fruit Cluster */}
       <div style={styles.bottomRightScene}>
-        <VazhaiMaramFull height={110} />
+        <VazhaiMaramFull height={160} />
       </div>
 
       <div style={styles.container} className="reveal-on-scroll">
