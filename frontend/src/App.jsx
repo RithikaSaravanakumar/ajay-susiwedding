@@ -148,6 +148,9 @@ function App() {
           {/* Fullscreen Hero */}
           <Hero lang={lang} />
 
+          {/* Live Countdown Timer (In the Beginning) */}
+          <Countdown lang={lang} />
+
           {/* Digital Luxury Invitation Card */}
           <Invitation lang={lang} />
 

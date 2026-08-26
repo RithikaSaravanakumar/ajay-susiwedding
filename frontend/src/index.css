@@ -127,8 +127,8 @@ div[style*="feastSubCard"] {
 
 /* Compact Countdown Main Card with Rounded Corners & Maroon Dotted Border */
 .countdown-main-card {
-  width: min(100% - 20px, 310px) !important;
-  max-width: 310px !important;
+  width: min(100% - 20px, 320px) !important;
+  max-width: 320px !important;
   margin: 0 auto !important;
   border-radius: 20px !important;
   border: 1.5px dashed var(--color-maroon) !important;
@@ -354,7 +354,7 @@ div[style*="feastSubCard"] {
     min-width: 0;
   }
 
-  /* 2. Hero Section Top Offset & Compact Height (Make Timeline Instantly Visible) */
+  /* 2. Hero Section Top Offset & Compact Height */
   .hero-main-section {
     margin-top: 48px !important;
     min-height: 40vh !important;
@@ -377,39 +377,51 @@ div[style*="feastSubCard"] {
     font-size: clamp(14px, 4vw, 17px) !important;
   }
 
-  /* 4. Single-Column Compact Mobile Timeline Cards (width: 82%, max-width: 285px) */
+  /* 4. Left-Aligned Vertical Timeline Line & Right-Aligned Milestone Cards */
   .story-main-section {
     scroll-margin-top: 50px !important;
     padding-top: 0.5rem !important;
   }
   .timeline-center-line {
-    display: none !important;
+    display: block !important;
+    position: absolute !important;
+    left: 14px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 3px !important;
+    background: linear-gradient(180deg, var(--color-gold) 0%, var(--color-maroon) 50%, var(--color-gold) 100%) !important;
+    transform: none !important;
+    z-index: 1 !important;
   }
   .timeline-item-container {
-    flex-direction: column !important;
-    align-items: center !important;
-    margin-bottom: 0.6rem !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+    margin-bottom: 0.85rem !important;
     width: 100% !important;
     padding: 0 !important;
   }
+  .timeline-node-dot {
+    position: absolute !important;
+    left: 14px !important;
+    top: 10px !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    width: 26px !important;
+    height: 26px !important;
+    z-index: 3 !important;
+  }
   .timeline-card-wrapper {
-    width: 82% !important;
-    max-width: 285px !important;
-    margin: 0 auto !important;
+    margin-left: 34px !important;
+    width: calc(100% - 36px) !important;
+    max-width: calc(100% - 36px) !important;
     text-align: left !important;
     float: none !important;
+    margin-right: 0 !important;
   }
   .timeline-empty-spacer {
     display: none !important;
-  }
-  .timeline-node-dot {
-    position: relative !important;
-    left: 0 !important;
-    top: 0 !important;
-    transform: none !important;
-    margin: 0 auto 0.2rem !important;
-    width: 26px !important;
-    height: 26px !important;
   }
   .storyCard {
     padding: 0.55rem 0.6rem !important;
@@ -444,8 +456,8 @@ div[style*="feastSubCard"] {
   div[style*="unifiedEventCard"] {
     padding: 0.5rem 0.45rem !important;
     border-radius: 12px !important;
-    width: 82% !important;
-    max-width: 280px !important;
+    width: 84% !important;
+    max-width: 285px !important;
     margin: 0 auto !important;
     border: 1.5px dashed var(--color-maroon) !important;
   }
