@@ -73,8 +73,8 @@ body.lang-en h4 {
   min-height: 100vh;
   overflow-x: hidden !important;
   position: relative;
-  padding-left: 14px;
-  padding-right: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Remove dots in starting hero section alone */
@@ -121,19 +121,19 @@ div[style*="invitationCard"],
 div[style*="contentCard"],
 div[style*="feastSubCard"] {
   border: 1.5px dashed var(--color-maroon) !important;
-  box-shadow: 0 8px 24px rgba(107, 30, 45, 0.08) !important;
+  box-shadow: 0 6px 18px rgba(107, 30, 45, 0.08) !important;
   overflow: hidden !important;
 }
 
 /* Compact Countdown Main Card with Rounded Corners & Maroon Dotted Border */
 .countdown-main-card {
-  width: min(100% - 24px, 360px) !important;
-  max-width: 360px !important;
+  width: min(100% - 20px, 310px) !important;
+  max-width: 310px !important;
   margin: 0 auto !important;
-  border-radius: 24px !important;
+  border-radius: 20px !important;
   border: 1.5px dashed var(--color-maroon) !important;
-  padding: 1.25rem 0.85rem !important;
-  box-shadow: 0 10px 30px rgba(107, 30, 45, 0.1) !important;
+  padding: 0.85rem 0.6rem !important;
+  box-shadow: 0 8px 24px rgba(107, 30, 45, 0.1) !important;
   overflow: hidden !important;
 }
 
@@ -142,9 +142,9 @@ div[style*="feastSubCard"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin: 0.6rem auto 1rem;
-  max-width: 240px;
+  gap: 0.8rem;
+  margin: 0.4rem auto 0.6rem;
+  max-width: 180px;
 }
 
 .ornament-line {
@@ -154,8 +154,8 @@ div[style*="feastSubCard"] {
 }
 
 .ornament-dot {
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   background-color: var(--color-maroon);
   transform: rotate(45deg);
 }
@@ -163,8 +163,8 @@ div[style*="feastSubCard"] {
 /* Scroll Reveal Animations */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(15px);
-  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(10px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
@@ -176,7 +176,7 @@ div[style*="feastSubCard"] {
 .reveal-scale {
   opacity: 0;
   transform: scale(0.95);
-  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-scale.is-revealed {
@@ -195,14 +195,14 @@ div[style*="feastSubCard"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 100%);
   color: var(--color-maroon-dark);
-  padding: 0.65rem 1.4rem;
+  padding: 0.45rem 1rem;
   border: 1px solid var(--color-gold-dark);
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.88rem;
+  font-size: 0.78rem;
   letter-spacing: 0.4px;
   cursor: pointer;
   box-shadow: var(--shadow-sm);
@@ -221,14 +221,14 @@ div[style*="feastSubCard"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   background: linear-gradient(135deg, var(--color-maroon) 0%, var(--color-maroon-dark) 100%);
   color: var(--color-cream);
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.1rem;
   border: 1px solid var(--color-gold);
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   cursor: pointer;
   box-shadow: var(--shadow-md);
   transition: var(--transition-smooth);
@@ -246,14 +246,14 @@ div[style*="feastSubCard"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   background: transparent;
   color: var(--color-maroon);
-  padding: 0.55rem 1.2rem;
+  padding: 0.4rem 0.9rem;
   border: 1.5px solid var(--color-gold);
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   cursor: pointer;
   transition: var(--transition-smooth);
   text-decoration: none;
@@ -308,17 +308,17 @@ div[style*="feastSubCard"] {
   flex-wrap: nowrap !important;
   justify-content: center !important;
   align-items: center !important;
-  gap: 0.4rem !important;
+  gap: 0.3rem !important;
   width: 100% !important;
-  max-width: 340px !important;
+  max-width: 290px !important;
   margin: 0 auto !important;
 }
 
 .countdown-timer-box {
   flex: 1 1 0px !important;
   min-width: 0 !important;
-  padding: 0.5rem 0.25rem !important;
-  border-radius: 14px !important;
+  padding: 0.35rem 0.15rem !important;
+  border-radius: 10px !important;
   border: 1.5px dashed var(--color-gold) !important;
 }
 
@@ -329,16 +329,16 @@ div[style*="feastSubCard"] {
   flex-wrap: nowrap !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 1.25rem !important;
+  gap: 0.8rem !important;
   width: 100% !important;
 }
 
 /* 10/10 Mobile-Only Responsive Rules (max-width: 767px) */
 @media (max-width: 767px) {
-  /* 1. Compact Mobile Navbar & Brand Name Protection (1B) */
+  /* 1. Compact Mobile Navbar & Brand Name Protection */
   header.main-header {
-    height: 64px !important;
-    padding: 0.4rem 0.85rem !important;
+    height: 48px !important;
+    padding: 0.25rem 0.6rem !important;
   }
   .desktop-nav-ul {
     display: none !important;
@@ -349,38 +349,38 @@ div[style*="feastSubCard"] {
     justify-content: center;
   }
   .brand-title-text {
-    font-size: clamp(14px, 4.2vw, 18px) !important;
+    font-size: clamp(13px, 3.8vw, 16px) !important;
     white-space: nowrap !important;
     min-width: 0;
   }
 
-  /* 2. Hero Section Top Offset (1A: Prevent Navbar From Covering Hero / A♥S Monogram) */
+  /* 2. Hero Section Top Offset & Compact Height (Make Timeline Instantly Visible) */
   .hero-main-section {
-    margin-top: 64px !important;
-    min-height: 65vh !important;
-    max-height: 80vh !important;
-    padding: 2rem 0.85rem 1.5rem !important;
+    margin-top: 48px !important;
+    min-height: 40vh !important;
+    max-height: 52vh !important;
+    padding: 1rem 0.5rem 0.8rem !important;
     background-image: none !important;
   }
 
   /* 3. Mobile Section Padding & Vertical Gaps */
   section {
-    padding: 28px 10px !important;
+    padding: 14px 6px !important;
   }
   div[style*="headerBox"] {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 0.6rem !important;
   }
   h1, h2 {
-    font-size: clamp(22px, 6vw, 28px) !important;
+    font-size: clamp(16px, 4.5vw, 20px) !important;
   }
   h3 {
-    font-size: clamp(18px, 5vw, 22px) !important;
+    font-size: clamp(14px, 4vw, 17px) !important;
   }
 
-  /* 4. Single-Column Mobile Timeline & Full-Width Cards Fitting Inside Maroon Dotted Border */
+  /* 4. Single-Column Compact Mobile Timeline Cards (width: 82%, max-width: 285px) */
   .story-main-section {
-    scroll-margin-top: 70px !important;
-    padding-top: 1.2rem !important;
+    scroll-margin-top: 50px !important;
+    padding-top: 0.5rem !important;
   }
   .timeline-center-line {
     display: none !important;
@@ -388,13 +388,13 @@ div[style*="feastSubCard"] {
   .timeline-item-container {
     flex-direction: column !important;
     align-items: center !important;
-    margin-bottom: 1.25rem !important;
+    margin-bottom: 0.6rem !important;
     width: 100% !important;
     padding: 0 !important;
   }
   .timeline-card-wrapper {
-    width: min(100% - 24px, 430px) !important;
-    max-width: 94% !important;
+    width: 82% !important;
+    max-width: 285px !important;
     margin: 0 auto !important;
     text-align: left !important;
     float: none !important;
@@ -407,17 +407,17 @@ div[style*="feastSubCard"] {
     left: 0 !important;
     top: 0 !important;
     transform: none !important;
-    margin: 0 auto 0.4rem !important;
-    width: 36px !important;
-    height: 36px !important;
+    margin: 0 auto 0.2rem !important;
+    width: 26px !important;
+    height: 26px !important;
   }
   .storyCard {
-    padding: 1.25rem 0.85rem !important;
-    border-radius: 14px !important;
+    padding: 0.55rem 0.6rem !important;
+    border-radius: 10px !important;
     border: 1.5px dashed var(--color-maroon) !important;
   }
 
-  /* 5. Paragraph Text Readability & 0 Narrow Wraps */
+  /* 5. Reduced Timeline Font Sizes & Readability */
   p, span, div {
     word-break: normal !important;
     overflow-wrap: normal !important;
@@ -426,106 +426,112 @@ div[style*="feastSubCard"] {
   .storyCard p,
   .itemDesc,
   .quoteText {
-    font-size: clamp(14px, 3.8vw, 16px) !important;
-    line-height: 1.55 !important;
+    font-size: clamp(11px, 3.1vw, 12.5px) !important;
+    line-height: 1.4 !important;
   }
   .itemTitle {
-    font-size: clamp(18px, 5vw, 22px) !important;
+    font-size: clamp(13px, 3.8vw, 15px) !important;
+    margin: 0.15rem 0 0.3rem !important;
+  }
+  .calligraphicTag {
+    font-size: 0.65rem !important;
   }
 
   /* 6. Event Location Cards & Map Embeds */
   div[style*="eventsWrapper"] {
-    gap: 1.5rem !important;
+    gap: 0.8rem !important;
   }
   div[style*="unifiedEventCard"] {
-    padding: 1.25rem 0.75rem 1.1rem !important;
-    border-radius: 16px !important;
-    width: min(100% - 24px, 430px) !important;
+    padding: 0.6rem 0.5rem !important;
+    border-radius: 12px !important;
+    width: 84% !important;
+    max-width: 285px !important;
     margin: 0 auto !important;
     border: 1.5px dashed var(--color-maroon) !important;
   }
   div[style*="venueLocationSection"] {
-    padding: 0.85rem 0.6rem !important;
+    padding: 0.4rem 0.3rem !important;
     width: 100% !important;
   }
   div[style*="mapContainer"] {
-    height: 150px !important;
+    height: 100px !important;
   }
   a[style*="directionsBtn"] {
     max-width: 100% !important;
     width: 100% !important;
-    height: 42px !important;
-    font-size: 0.88rem !important;
+    height: 32px !important;
+    font-size: 0.75rem !important;
   }
 
-  /* 7. Mobile Invitation & General Cards Fitting Inside Maroon Dotted Border */
+  /* 7. Mobile Invitation & General Cards */
   div[style*="invitationCard"],
   div[style*="contentCard"],
   div[style*="card"] {
-    width: min(100% - 24px, 430px) !important;
+    width: 84% !important;
+    max-width: 285px !important;
     margin: 0 auto !important;
-    padding: 1.25rem 0.85rem !important;
-    border-radius: 14px !important;
+    padding: 0.6rem 0.5rem !important;
+    border-radius: 10px !important;
     border: 1.5px dashed var(--color-maroon) !important;
   }
 
   /* 8. Compact Rounded Countdown Main Card Mobile Proportions */
   .countdown-main-card {
-    width: min(100% - 20px, 330px) !important;
-    max-width: 330px !important;
-    padding: 1rem 0.65rem !important;
-    border-radius: 20px !important;
+    width: 84% !important;
+    max-width: 285px !important;
+    padding: 0.6rem 0.4rem !important;
+    border-radius: 14px !important;
   }
   .countdown-timer-box {
-    border-radius: 12px !important;
-    padding: 0.4rem 0.15rem !important;
+    border-radius: 8px !important;
+    padding: 0.3rem 0.1rem !important;
   }
   .countdown-timer-box span[style*="value"] {
-    font-size: 1.25rem !important;
+    font-size: 1.1rem !important;
   }
   .countdown-timer-box span[style*="label"] {
-    font-size: 0.68rem !important;
+    font-size: 0.6rem !important;
   }
 
   /* 9. Single Horizontal Line Couple Names in Our Story Card */
   .couple-names-row {
-    gap: 0.75rem !important;
+    gap: 0.5rem !important;
   }
   .couple-names-row h3 {
-    font-size: 1.35rem !important;
+    font-size: 1.15rem !important;
   }
 
   /* 10. Touch Buttons Scaling */
   .btn-gold,
   .btn-maroon,
   .btn-outline-gold {
-    padding: 0.65rem 1.2rem !important;
-    font-size: 0.88rem !important;
-    height: 42px !important;
+    padding: 0.35rem 0.8rem !important;
+    font-size: 0.75rem !important;
+    height: 32px !important;
   }
 
   /* 11. Hero Scene Artwork Position */
   div[style*="bottomLeftScene"] {
-    transform: scale(0.42);
+    transform: scale(0.25);
     transform-origin: bottom left;
     left: 0 !important;
     bottom: 0 !important;
-    opacity: 0.3 !important;
+    opacity: 0.25 !important;
   }
   div[style*="bottomRightScene"] {
-    transform: scale(0.42);
+    transform: scale(0.25);
     transform-origin: bottom right;
     right: 0 !important;
     bottom: 0 !important;
-    opacity: 0.3 !important;
+    opacity: 0.25 !important;
   }
 
   /* 12. Floating Music Control */
   .music-player-toggle {
-    bottom: calc(12px + env(safe-area-inset-bottom)) !important;
-    right: 12px !important;
-    width: 42px !important;
-    height: 42px !important;
+    bottom: calc(8px + env(safe-area-inset-bottom)) !important;
+    right: 8px !important;
+    width: 32px !important;
+    height: 32px !important;
   }
 }
 
@@ -547,7 +553,7 @@ div[style*="feastSubCard"] {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   background: var(--color-cream);
