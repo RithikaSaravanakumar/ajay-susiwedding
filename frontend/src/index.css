@@ -318,7 +318,7 @@ img, iframe, svg {
     font-size: clamp(13px, 3.5vw, 15px) !important;
   }
 
-  /* 4. Nano Mobile Timeline Layout */
+  /* 4. Compact Micro Cards Sizing (Width ~ 82%, Max-Width ~ 290px) */
   .story-main-section {
     scroll-margin-top: 40px !important;
     padding-top: 0.4rem !important;
@@ -334,8 +334,8 @@ img, iframe, svg {
     padding: 0 !important;
   }
   .timeline-card-wrapper {
-    width: calc(100% - 8px) !important;
-    max-width: 98% !important;
+    width: 84% !important;
+    max-width: 290px !important;
     margin: 0 auto !important;
     text-align: left !important;
     float: none !important;
@@ -353,7 +353,7 @@ img, iframe, svg {
     height: 22px !important;
   }
   .storyCard {
-    padding: 0.5rem 0.4rem !important;
+    padding: 0.4rem 0.5rem !important;
     border-radius: 6px !important;
   }
 
@@ -373,56 +373,67 @@ img, iframe, svg {
     font-size: clamp(12px, 3.5vw, 15px) !important;
   }
 
-  /* 6. Nano Event Location Cards & Map Embeds */
+  /* 6. Compact Micro Event Location Cards & Map Embeds */
   div[style*="eventsWrapper"] {
     gap: 0.6rem !important;
   }
   div[style*="unifiedEventCard"] {
-    padding: 0.6rem 0.4rem 0.5rem !important;
+    padding: 0.5rem 0.4rem 0.4rem !important;
     border-radius: 8px !important;
-    width: 98% !important;
+    width: 84% !important;
+    max-width: 290px !important;
     margin: 0 auto !important;
   }
   div[style*="venueLocationSection"] {
-    padding: 0.4rem 0.3rem !important;
+    padding: 0.3rem 0.2rem !important;
     width: 100% !important;
   }
   div[style*="mapContainer"] {
-    height: 85px !important;
+    height: 75px !important;
   }
   a[style*="directionsBtn"] {
     max-width: 100% !important;
     width: 100% !important;
-    height: 28px !important;
-    font-size: 0.7rem !important;
+    height: 26px !important;
+    font-size: 0.68rem !important;
   }
 
-  /* 7. Nano Buttons Scaling */
+  /* 7. Compact Micro Card General Classes */
+  div[style*="invitationCard"],
+  div[style*="card"] {
+    width: 86% !important;
+    max-width: 295px !important;
+    margin: 0 auto !important;
+    padding: 0.6rem 0.5rem !important;
+    border-radius: 8px !important;
+  }
+
+  /* 8. Nano Buttons Scaling */
   .btn-gold,
   .btn-maroon,
   .btn-outline-gold {
     padding: 0.25rem 0.6rem !important;
     font-size: 0.7rem !important;
-    height: 28px !important;
+    height: 26px !important;
   }
 
-  /* 8. Hero Scene Artwork Scale & Position */
+  /* 9. Hero Scene Artwork Scale & Position */
   div[style*="bottomLeftScene"] {
-    transform: scale(0.2);
+    transform: scale(0.18);
     transform-origin: bottom left;
     left: 0 !important;
     bottom: 0 !important;
     opacity: 0.2 !important;
   }
   div[style*="bottomRightScene"] {
-    transform: scale(0.2);
+    transform: scale(0.18);
     transform-origin: bottom right;
     right: 0 !important;
     bottom: 0 !important;
     opacity: 0.2 !important;
   }
 
-  /* 9. Floating Music Player Button */
+  /* 10. Floating Music Player Button */
   .music-player-toggle {
     bottom: calc(6px + env(safe-area-inset-bottom)) !important;
     right: 6px !important;
