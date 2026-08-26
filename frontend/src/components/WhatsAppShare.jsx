@@ -6,8 +6,8 @@ const WhatsAppShare = ({ lang }) => {
   const content = siteData[lang].share;
 
   const handleShare = () => {
-    const currentUrl = window.location.href;
-    const shareText = `${content.waText} ${currentUrl}`;
+    const shareUrl = 'https://ajay-susiwedding.vercel.app/?invitation=ajay-susi';
+    const shareText = `${content.waText} ${shareUrl}`;
     const waUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
     window.open(waUrl, '_blank', 'noopener,noreferrer');
   };
