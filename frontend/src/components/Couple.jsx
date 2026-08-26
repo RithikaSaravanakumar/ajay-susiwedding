@@ -22,7 +22,7 @@ const Couple = ({ lang }) => {
             <Monogram size="xl" />
           </div>
 
-          <div style={styles.coupleRow}>
+          <div style={styles.coupleRow} className="couple-names-row">
             {/* Groom Box */}
             <div style={styles.personBox}>
               <h3 style={styles.personName}>{content.groomName}</h3>
@@ -31,12 +31,12 @@ const Couple = ({ lang }) => {
 
             {/* Heart Divider Icon */}
             <div style={styles.heartWrapper}>
-              <Heart size={28} fill="var(--color-gold)" color="var(--color-gold)" />
+              <Heart size={24} fill="var(--color-gold)" color="var(--color-gold)" />
             </div>
 
             {/* Bride Box */}
             <div style={styles.personBox}>
-              <h3 style={styles.personName}>{content.brideName}</h3>
+              <h3 style={styles.personName}>{content.brideName === "Susindra" ? "Susi" : (content.brideName === "சுசிந்ரா" ? "சுசி" : content.brideName)}</h3>
               <span style={styles.personRole}>{content.brideRole}</span>
             </div>
           </div>

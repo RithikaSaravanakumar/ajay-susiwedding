@@ -290,6 +290,17 @@ img, iframe, svg {
   border-radius: 8px !important;
 }
 
+/* Single Horizontal Line Couple Names in Our Story Card */
+.couple-names-row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1.25rem !important;
+  width: 100% !important;
+}
+
 /* 10/10 Mobile-Only Responsive Rules (max-width: 767px) */
 @media (max-width: 767px) {
   /* 1. Compact Mobile Navbar & Brand Name Protection (1B) */
@@ -429,7 +440,15 @@ img, iframe, svg {
     font-size: 0.72rem !important;
   }
 
-  /* 9. Touch Buttons Scaling */
+  /* 9. Single Horizontal Line Couple Names in Our Story Card */
+  .couple-names-row {
+    gap: 0.75rem !important;
+  }
+  .couple-names-row h3 {
+    font-size: 1.35rem !important;
+  }
+
+  /* 10. Touch Buttons Scaling */
   .btn-gold,
   .btn-maroon,
   .btn-outline-gold {
@@ -438,7 +457,7 @@ img, iframe, svg {
     height: 42px !important;
   }
 
-  /* 10. Hero Scene Artwork Position */
+  /* 11. Hero Scene Artwork Position */
   div[style*="bottomLeftScene"] {
     transform: scale(0.42);
     transform-origin: bottom left;
@@ -454,7 +473,7 @@ img, iframe, svg {
     opacity: 0.45 !important;
   }
 
-  /* 11. Floating Music Control */
+  /* 12. Floating Music Control */
   .music-player-toggle {
     bottom: calc(12px + env(safe-area-inset-bottom)) !important;
     right: 12px !important;
