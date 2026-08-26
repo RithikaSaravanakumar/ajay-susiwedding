@@ -42,14 +42,14 @@ END:VCALENDAR`;
         <div style={styles.eventsWrapper}>
           {/* UNIFIED MUHURTHAM EVENT & VENUE LOCATION CARD */}
           <div style={styles.unifiedEventCard} className="reveal-scale delay-1">
-            <VazhaiMaramSide side="left" height={220} />
-            <VazhaiMaramSide side="right" height={220} />
+            <VazhaiMaramSide side="left" height={140} />
+            <VazhaiMaramSide side="right" height={140} />
 
             <div style={styles.badge}>{content.wedding.badge}</div>
 
             {/* Top Ceremony Header */}
             <div style={styles.topCeremonyHeader}>
-              <DeepamVilakku size={40} />
+              <DeepamVilakku size={30} />
               <h3 style={styles.cardTitle}>{content.wedding.title}</h3>
               <p style={styles.ceremonySub}>
                 {isTa ? 'நாட்றம்பள்ளி திருமுருகன் ஆலயம் சுபமுகூர்த்த நன்னாள்' : 'Sacred Ceremony at Natrampalli Thirumurugan Alayam'}
@@ -59,11 +59,11 @@ END:VCALENDAR`;
             {/* Auspicious Date & Time Group */}
             <div style={styles.dateTimeContainer}>
               <div style={styles.infoRow}>
-                <Calendar size={22} color="var(--color-maroon)" />
+                <Calendar size={18} color="var(--color-maroon)" />
                 <span style={styles.infoTextBold}>{content.wedding.date}</span>
               </div>
               <div style={styles.infoRow}>
-                <Clock size={22} color="var(--color-maroon)" />
+                <Clock size={18} color="var(--color-maroon)" />
                 <span style={styles.infoTextBold}>{content.wedding.time}</span>
               </div>
               <button
@@ -71,7 +71,7 @@ END:VCALENDAR`;
                 style={styles.inlineCalBtn}
                 className="btn-outline-gold"
               >
-                <CalendarPlus size={18} />
+                <CalendarPlus size={15} />
                 <span>{content.addToCalendar}</span>
               </button>
             </div>
@@ -88,7 +88,7 @@ END:VCALENDAR`;
             {/* Connected Venue Location Details */}
             <div style={styles.venueLocationSection}>
               <div style={styles.venueHeaderRow}>
-                <MapPin size={24} color="var(--color-maroon)" />
+                <MapPin size={20} color="var(--color-maroon)" />
                 <h4 style={styles.venueName}>{content.wedding.venue}</h4>
               </div>
               <p style={styles.venueAddress}>{content.wedding.address}</p>
@@ -112,7 +112,7 @@ END:VCALENDAR`;
                 style={styles.directionsBtn}
                 className="btn-maroon"
               >
-                <Navigation size={18} />
+                <Navigation size={16} />
                 <span>{isTa ? 'வழிகாட்டி (Get Directions)' : 'Get Directions'}</span>
               </a>
             </div>
@@ -124,7 +124,7 @@ END:VCALENDAR`;
 
             {/* Top Ceremony Header */}
             <div style={styles.topCeremonyHeader}>
-              <Sparkles size={36} color="var(--color-gold-dark)" />
+              <Sparkles size={26} color="var(--color-gold-dark)" />
               <h3 style={styles.cardTitle}>{content.reception.title}</h3>
               <p style={styles.ceremonySub}>
                 {isTa ? 'மணீஷ் மஹால் கோலாகல மாலை வரவேற்பு விழா' : 'Grand Festive Evening at Manish Mahal'}
@@ -134,11 +134,11 @@ END:VCALENDAR`;
             {/* Date & Time Group */}
             <div style={styles.dateTimeContainer}>
               <div style={styles.infoRow}>
-                <Calendar size={22} color="var(--color-maroon)" />
+                <Calendar size={18} color="var(--color-maroon)" />
                 <span style={styles.infoTextBold}>{content.reception.date}</span>
               </div>
               <div style={styles.infoRow}>
-                <Clock size={22} color="var(--color-maroon)" />
+                <Clock size={18} color="var(--color-maroon)" />
                 <span style={styles.infoTextBold}>{content.reception.time}</span>
               </div>
               <button
@@ -146,7 +146,7 @@ END:VCALENDAR`;
                 style={styles.inlineCalBtn}
                 className="btn-outline-gold"
               >
-                <CalendarPlus size={18} />
+                <CalendarPlus size={15} />
                 <span>{content.addToCalendar}</span>
               </button>
             </div>
@@ -163,7 +163,7 @@ END:VCALENDAR`;
             {/* Connected Reception Location Details */}
             <div style={styles.venueLocationSection}>
               <div style={styles.venueHeaderRow}>
-                <MapPin size={24} color="var(--color-maroon)" />
+                <MapPin size={20} color="var(--color-maroon)" />
                 <h4 style={styles.venueName}>{content.reception.venue}</h4>
               </div>
               <p style={styles.venueAddress}>{content.reception.address}</p>
@@ -187,7 +187,7 @@ END:VCALENDAR`;
                 style={styles.directionsBtn}
                 className="btn-maroon"
               >
-                <Navigation size={18} />
+                <Navigation size={16} />
                 <span>{isTa ? 'வழிகாட்டி (Get Directions)' : 'Get Directions'}</span>
               </a>
             </div>
@@ -200,42 +200,42 @@ END:VCALENDAR`;
 
 const styles = {
   section: {
-    padding: '5.5rem 1.5rem',
+    padding: '3.5rem 1rem',
     backgroundColor: '#FAF6EE'
   },
   container: {
-    maxWidth: '1100px',
+    maxWidth: '850px',
     margin: '0 auto',
     textAlign: 'center'
   },
   headerBox: {
-    marginBottom: '3rem'
+    marginBottom: '2rem'
   },
   title: {
-    fontSize: 'clamp(2.4rem, 4.8vw, 3.4rem)',
+    fontSize: 'clamp(1.8rem, 3.8vw, 2.6rem)',
     color: 'var(--color-maroon)',
     margin: 0
   },
   subtitle: {
-    fontSize: '1.1rem',
+    fontSize: '0.95rem',
     color: 'var(--color-brown)',
     opacity: 0.85,
-    marginTop: '0.4rem'
+    marginTop: '0.3rem'
   },
   eventsWrapper: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '3.5rem',
+    gap: '2rem',
     alignItems: 'center'
   },
   unifiedEventCard: {
     width: '100%',
-    maxWidth: '850px',
+    maxWidth: '580px',
     backgroundColor: '#FCFBF5',
-    border: '2px solid var(--color-gold)',
-    borderRadius: '24px',
-    padding: '3rem 2rem 2.5rem',
-    boxShadow: 'var(--shadow-lg)',
+    border: '1.5px dashed var(--color-maroon)',
+    borderRadius: '18px',
+    padding: '1.6rem 1.2rem 1.25rem',
+    boxShadow: 'var(--shadow-md)',
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
@@ -244,67 +244,69 @@ const styles = {
   },
   badge: {
     position: 'absolute',
-    top: '-14px',
+    top: '-12px',
     backgroundColor: 'var(--color-maroon)',
     color: 'var(--color-cream)',
-    padding: '0.35rem 1.25rem',
+    padding: '0.25rem 1rem',
     borderRadius: '20px',
-    fontSize: '0.82rem',
+    fontSize: '0.75rem',
     fontWeight: '700',
-    letterSpacing: '1px',
+    letterSpacing: '0.8px',
     border: '1px solid var(--color-gold)'
   },
   topCeremonyHeader: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '0.5rem',
-    marginBottom: '1.5rem'
+    gap: '0.3rem',
+    marginBottom: '1rem'
   },
   cardTitle: {
-    fontSize: 'clamp(1.8rem, 3.8vw, 2.5rem)',
+    fontSize: 'clamp(1.3rem, 2.8vw, 1.8rem)',
     color: 'var(--color-maroon)',
     margin: 0
   },
   ceremonySub: {
-    fontSize: '1rem',
+    fontSize: '0.85rem',
     color: 'var(--color-gold-dark)',
     fontStyle: 'italic'
   },
   dateTimeContainer: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '1rem',
+    gap: '0.6rem',
     width: '100%',
-    maxWidth: '560px',
-    margin: '0 auto 1.5rem'
+    maxWidth: '440px',
+    margin: '0 auto 1rem'
   },
   infoRow: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: '0.85rem',
-    padding: '0.85rem 1.25rem',
+    gap: '0.6rem',
+    padding: '0.5rem 0.85rem',
     backgroundColor: 'var(--color-white)',
-    borderRadius: '12px',
-    borderLeft: '4px solid var(--color-gold)',
+    borderRadius: '10px',
+    borderLeft: '3px solid var(--color-gold)',
     boxShadow: 'var(--shadow-sm)'
   },
   infoTextBold: {
-    fontSize: '1.08rem',
+    fontSize: '0.92rem',
     fontWeight: '600',
     color: 'var(--color-brown)'
   },
   inlineCalBtn: {
-    marginTop: '0.5rem'
+    marginTop: '0.3rem',
+    padding: '0.35rem 0.85rem',
+    fontSize: '0.78rem'
   },
   connectedDivider: {
     display: 'flex',
     alignItems: 'center',
-    gap: '1rem',
+    gap: '0.75rem',
     width: '100%',
-    maxWidth: '650px',
-    margin: '1rem 0 2rem'
+    maxWidth: '480px',
+    margin: '0.6rem 0 1.25rem'
   },
   divLine: {
     height: '1px',
@@ -312,49 +314,49 @@ const styles = {
     background: 'linear-gradient(90deg, transparent, var(--color-gold), transparent)'
   },
   divText: {
-    fontSize: '0.82rem',
+    fontSize: '0.75rem',
     fontWeight: '700',
     color: 'var(--color-gold-dark)',
-    letterSpacing: '1.2px',
+    letterSpacing: '1px',
     textTransform: 'uppercase'
   },
   venueLocationSection: {
     width: '100%',
-    maxWidth: '680px',
+    maxWidth: '500px',
     backgroundColor: 'var(--color-white)',
-    border: '1.5px solid var(--color-gold-light)',
-    borderRadius: '16px',
-    padding: '2rem 1.6rem',
-    boxShadow: 'var(--shadow-md)',
+    border: '1px dashed var(--color-gold-light)',
+    borderRadius: '14px',
+    padding: '1.1rem 1rem',
+    boxShadow: 'var(--shadow-sm)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '1rem'
+    gap: '0.6rem'
   },
   venueHeaderRow: {
     display: 'flex',
     alignItems: 'center',
-    gap: '0.6rem'
+    gap: '0.4rem'
   },
   venueName: {
-    fontSize: '1.45rem',
+    fontSize: '1.15rem',
     color: 'var(--color-maroon)',
     margin: 0
   },
   venueAddress: {
-    fontSize: '0.98rem',
+    fontSize: '0.85rem',
     color: 'var(--color-brown)',
     opacity: 0.9,
-    maxWidth: '520px'
+    maxWidth: '420px'
   },
   mapContainer: {
     width: '100%',
-    height: '240px',
-    borderRadius: '12px',
+    height: '130px',
+    borderRadius: '10px',
     overflow: 'hidden',
     border: '1px solid var(--color-gold)',
     boxShadow: 'var(--shadow-sm)',
-    margin: '0.5rem 0'
+    margin: '0.3rem 0'
   },
   iframe: {
     width: '100%',
@@ -362,9 +364,11 @@ const styles = {
     border: 0
   },
   directionsBtn: {
-    marginTop: '0.5rem',
+    marginTop: '0.3rem',
     width: '100%',
-    maxWidth: '300px'
+    maxWidth: '240px',
+    height: '32px',
+    fontSize: '0.78rem'
   }
 };
 

@@ -437,30 +437,30 @@ div[style*="feastSubCard"] {
     font-size: 0.65rem !important;
   }
 
-  /* 6. Event Location Cards & Map Embeds */
+  /* 6. Compact Event Location Cards & Reduced Map Height */
   div[style*="eventsWrapper"] {
-    gap: 0.8rem !important;
+    gap: 0.65rem !important;
   }
   div[style*="unifiedEventCard"] {
-    padding: 0.6rem 0.5rem !important;
+    padding: 0.5rem 0.45rem !important;
     border-radius: 12px !important;
-    width: 84% !important;
-    max-width: 285px !important;
+    width: 82% !important;
+    max-width: 280px !important;
     margin: 0 auto !important;
     border: 1.5px dashed var(--color-maroon) !important;
   }
   div[style*="venueLocationSection"] {
-    padding: 0.4rem 0.3rem !important;
+    padding: 0.35rem 0.25rem !important;
     width: 100% !important;
   }
   div[style*="mapContainer"] {
-    height: 100px !important;
+    height: 75px !important;
   }
   a[style*="directionsBtn"] {
     max-width: 100% !important;
     width: 100% !important;
-    height: 32px !important;
-    font-size: 0.75rem !important;
+    height: 28px !important;
+    font-size: 0.72rem !important;
   }
 
   /* 7. Mobile Invitation & General Cards */
